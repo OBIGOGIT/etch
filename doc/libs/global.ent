@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NAMES -->
+<!ENTITY project-name 'Etch Documentation Project'>
+
+<!-- VERSIONS -->
+<!ENTITY version-major '1'>
+<!ENTITY version-minor '3'>
+<!ENTITY version-patch '0'>
+<!ENTITY version-suffix ''>
+<!ENTITY version-name '1.3.0'>
+
+<!-- RELEASES --> 
+<!ENTITY release-date "August 2013">
+

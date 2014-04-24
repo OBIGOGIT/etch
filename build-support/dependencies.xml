@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ <!--
+ * Licensed to the Apache Software Foundation (ASF) under one   *
+ * or more contributor license agreements.  See the NOTICE file *
+ * distributed with this work for additional information        *
+ * regarding copyright ownership.  The ASF licenses this file   *
+ * to you under the Apache License, Version 2.0 (the            *
+ * "License"); you may not use this file except in compliance   *
+ * with the License.  You may obtain a copy of the License at   *
+ *                                                              *
+ *   http://www.apache.org/licenses/LICENSE-2.0                 *
+ *                                                              *
+ * Unless required by applicable law or agreed to in writing,   *
+ * software distributed under the License is distributed on an  *
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY       *
+ * KIND, either express or implied.  See the License for the    *
+ * specific language governing permissions and limitations      *
+ * under the License.                                           *
+ -->
+<project name="etch-dependencies" basedir="." default="check-all">
+    <description>Etch Dependencies</description>
+    <property name="Etch.basedir" location="${basedir}/.." />
+    
+    <!-- Load Environment -->
+    <property environment="env" />
+    
+    <!-- Load dependencies -->
+    <property file="${Etch.basedir}/build.dependencies" prefix="file" />
+    <property file="${Etch.basedir}/build.properties" prefix="file" />
+
+    <!-- Pull properties from commandline -->
+    <condition property="build.javacc.home" value="${javacc.home}" >
+        <isset property="javacc.home" />
+    </condition>
+
+    <condition property="build.junit.lib" value="${junit.lib}" >
+        <isset property="junit.lib" />
+    </condition>
+
+    <condition property="build.velocity.lib" value="${velocity.lib}" >
+        <isset property="velocity.lib" />
+    </condition>
+
+    <condition property="build.ant-dotnet.lib" value="${ant-dotnet.lib}" >
+        <isset property="ant-dotnet.lib" />
+    </condition>
+
+    <condition property="build.ant-cmake.lib" value="${ant-cmake.lib}" >
+        <isset property="ant-cmake.lib" />
+    </condition>
+
+    <property file="${Etch.basedir}/build.dependencies" prefix="build" />
+
+    <target name="check-javacc" >
+        <echo message="javacc.home = ${build.javacc.home}" />
+        <fail message="'javacc.jar' cannot be found. Please set 'javacc.home' in build.dependencies or specify value for 'javacc.home' on command-line">
+            <condition>
+                <and>
+                <not><available file="${build.javacc.home}/JavaCC.zip" /></not>
+                <not><available file="${build.javacc.home}/bin/lib/JavaCC.zip" /></not>
+                <not><available file="${build.javacc.home}/javacc.jar" /></not>
+                <not><available file="${build.javacc.home}/bin/lib/javacc.jar" /></not>
+                </and>
+            </condition>
+        </fail>
+    </target>
+    
+    <target name="check-junit">
+        <fail message="'junit-4.3.1.jar' cannot be found. Please set 'junit.lib' in build.dependencies or specify value for 'junit.lib' onthe command-line">
+            <condition>
+                <not><available file="${build.junit.lib}/junit-4.3.1.jar" /></not>
+            </condition>
+        </fail>        
+    </target>
+    
+    <target name="check-velocity">
+        <fail message="'velocity-1.7-dep.jar' cannot be found. Please set 'velocity.lib' in build.dependencies or specify value for 'velocity.lib' on the command-line">
+            <condition>
+                <not><available file="${build.velocity.lib}/velocity-1.7-dep.jar" /></not>
+            </condition>
+        </fail>        
+    </target>
+
+    <target name="check-dotnet" depends="check-dotnet-check" if="dotnet-missing-components">
+         <echo>       
+              *
+              *
+              *
+              ************************************************************************
+              WARNING: ant-dotnet-1.1.jar and/or msbuild.exe and/or nunit.exe is missing, 
+                       dotnet support will be disabled on your windows system.
+                       (please check scripts/antSetup.bat for correct paths)
+              ************************************************************************
+              *
+              *
+              *
+         </echo>
+    </target>
+
+    <target name="check-dotnet-check">
+            <condition property="dotnet-missing-components" value="true">
+             <and>
+             <os family="windows" />
+             <or>
+                <not><available file="${build.ant-dotnet.lib}/ant-dotnet-1.1.jar" /></not>
+                <not><available file="${env.DOTNET_HOME}/msbuild.exe" /></not>
+                <not><available file="${env.NUNIT_HOME}/bin/net-2.0/nunit.exe" /></not>
+             </or>
+             </and>
+            </condition>
+    </target>
+
+    <target name="check-cmake" depends="check-cmake-check" if="cmake-missing-components">
+         <echo>
+              *
+              *
+              *
+              ************************************************************************
+              WARNING: cmakeant.jar is missing, cmake build is not possible.
+                     (please check scripts/antSetup.bat for correct paths)
+              ************************************************************************
+              *
+              *
+              *
+         </echo>
+    </target>
+
+    <target name="check-cmake-check">
+        <echo message="check: ${build.ant-cmake.lib}" />
+        <condition property="cmake-missing-components" value="true">
+            <not><available file="${build.ant-cmake.lib}/cmakeant.jar" /></not>
+        </condition>
+    </target>
+    
+    <target name="check-ant-contrib" depends="check-ant-contrib-check" if="ant-contrib-missing-components">
+         <echo>
+              *
+              *
+              *
+              ************************************************************************
+              WARNING: ant-contrib.lib is missing, some ant scripts will not work
+              ************************************************************************
+              *
+              *
+              *
+         </echo>
+    </target>
+
+    <target name="check-ant-contrib-check">
+        <echo message="check: ${build.ant-contrib.lib}" />
+        <condition property="ant-contrib-missing-components" value="true">
+            <not><available file="${build.ant-contrib.lib}/ant-contrib-1.0b3.jar" /></not>
+        </condition>
+    </target>
+
+    <target name="check-all" depends="check-javacc,check-junit,check-velocity,check-dotnet,check-cmake,check-ant-contrib" />
+
+</project>

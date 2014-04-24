@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY % globalent SYSTEM "../../libs/global.ent">
+%globalent;
+]>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="overview-chap" status="review">
+  <info>
+    <title xml:id="overview">Overview</title>
+  </info>
+    
+  <section xml:id="architecture" status="review"><info><title>Architecture</title></info>
+    
+    <para>Section about Etch Architecture.</para>
+  </section>
+
+</chapter>

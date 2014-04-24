@@ -1,0 +1,3011 @@
+-------------
+Release 1.3.0
+-------------
+
+------------------------------------------------------------------------
+r1518518 | veithm | 2013-08-29 09:02:27 +0200 (Do, 29. Aug 2013) | 5 Zeilen
+
+Updating Etch Version to 1.3
+
+Removing all incubator suffixes
+
+Change-Id: Ie1c7c93b3481530182d74cb5af20b051048c7c7c
+------------------------------------------------------------------------
+r1518250 | veithm | 2013-08-28 17:08:47 +0200 (Mi, 28. Aug 2013) | 3 Zeilen
+
+ETCH-224 Updating APR from version 1.4.5 to 1.4.8
+
+Change-Id: Ia653ebe171ee78dc4b1a47619433406c233a9538
+------------------------------------------------------------------------
+r1518248 | veithm | 2013-08-28 17:07:57 +0200 (Mi, 28. Aug 2013) | 6 Zeilen
+
+ETCH-273 Removing hardcoded HelloWorld string from compiler
+
+This patch removes the hardcoded HelloWorld example call from
+the velocity template
+
+Change-Id: I14672b6c474f5da225a06a6f599daf6610270997
+------------------------------------------------------------------------
+r1518247 | veithm | 2013-08-28 17:07:10 +0200 (Mi, 28. Aug 2013) | 7 Zeilen
+
+MINOR Replacing cmake ant plugin with cmake executable
+
+The CMake ant plugin is not working together with CMake 2.8.10
+or higher. Therefore the change to the exec task together
+with the CMake exectuable located in the Path was necessary.
+
+Change-Id: Ic8bbb90615f1aa6fbb047e8c59a824b4e37e52e0
+------------------------------------------------------------------------
+r1518245 | veithm | 2013-08-28 17:06:20 +0200 (Mi, 28. Aug 2013) | 6 Zeilen
+
+ETCH-267 Using session events in CPP Hello World example
+
+This patch demonstrates how session event handlers can be registered
+in user code.
+
+Change-Id: I4260d875893d37141ab61fc4d4432eb3f9f3259c
+------------------------------------------------------------------------
+r1518241 | veithm | 2013-08-28 17:05:23 +0200 (Mi, 28. Aug 2013) | 8 Zeilen
+
+ETCH-267 Forwarding session events to user code
+
+Till now session events are transferred through the
+stack, but were not passed to the user code.
+This patch makes it possible for the user code to override
+_session* events.
+
+Change-Id: Ida6b51a215888e70a6e02df748b772c188994053
+------------------------------------------------------------------------
+r1482741 | veithm | 2013-05-15 11:59:30 +0200 (Mi, 15. Mai 2013) | 3 Zeilen
+
+Improving FindCapu CMake script
+
+Change-Id: I82472dc627f525fcf42308c5ef8f2a589e9868b9
+------------------------------------------------------------------------
+r1482721 | veithm | 2013-05-15 10:31:34 +0200 (Mi, 15. Mai 2013) | 5 Zeilen
+
+ETCH-272 Fixing code generation error
+
+Fixing code generation when dealing with hashtables
+
+Change-Id: I1aae4bba5f6c4335b536990084d96a87c4b02e64
+------------------------------------------------------------------------
+r1476247 | veithm | 2013-04-26 17:06:25 +0200 (Fr, 26. Apr 2013) | 5 Zeilen
+
+ETCH-270 Passing through Capu include and library dirs in ant build
+
+Integrating CAPU v0.9.0, disabling unit tests by default
+
+Change-Id: Ia1f13174803092618a226744f97823af70990b0b
+------------------------------------------------------------------------
+r1460569 | veithm | 2013-03-25 10:47:07 +0100 (Mo, 25. Mär 2013) | 5 Zeilen
+
+ETCH-264 Improving cpp build process
+
+Doing copy to dist folder with CMake now
+
+Change-Id: Ifcbd69d4b7f86453bc722d1bec7d389f41683800
+------------------------------------------------------------------------
+r1460567 | veithm | 2013-03-25 10:46:31 +0100 (Mo, 25. Mär 2013) | 3 Zeilen
+
+Small bug fixes in Etch Code Generation and Runtime
+
+Change-Id: Ia3507b790eb66947c8c1cf36605b1ae1ae4a699e
+------------------------------------------------------------------------
+r1460566 | veithm | 2013-03-25 10:43:41 +0100 (Mo, 25. Mär 2013) | 6 Zeilen
+
+ETCH-263 Cleaning up external library dependency
+
+Adapting Etch to use CAPU version 0.8.1
+CAPU is now included as a external dependency
+
+Change-Id: I1d81b508e129d15f78bfd0148e9367d31122d51f
+------------------------------------------------------------------------
+r1460564 | veithm | 2013-03-25 10:39:38 +0100 (Mo, 25. Mär 2013) | 3 Zeilen
+
+ETCH-262 Enabling unit tests build of cpp binding with Visual Studio 11
+
+Change-Id: I71c4a934bfb965707e905262289fc71423dc6a0c
+------------------------------------------------------------------------
+r1460562 | veithm | 2013-03-25 10:39:07 +0100 (Mo, 25. Mär 2013) | 3 Zeilen
+
+ETCH-241 Adding helper scripts for building a single binding
+
+Change-Id: I4f3d2472325f115cc51e6bfa667e483b9a580b87
+------------------------------------------------------------------------
+r1460561 | veithm | 2013-03-25 10:38:11 +0100 (Mo, 25. Mär 2013) | 3 Zeilen
+
+Enabling release build of a specific binding only
+
+Change-Id: I3946152bd6a5c12978e995f19961d26a34cfbf8b
+------------------------------------------------------------------------
+r1460560 | veithm | 2013-03-25 10:37:24 +0100 (Mo, 25. Mär 2013) | 3 Zeilen
+
+ETCH-261 Splitting up large initParams function in CPP code generator
+
+Change-Id: Ie3b291fc3e0a4817f4a9628a79629ab7e6debd70
+------------------------------------------------------------------------
+r1460559 | veithm | 2013-03-25 10:36:42 +0100 (Mo, 25. Mär 2013) | 3 Zeilen
+
+ETCH-260 Enable HelloWorld Cpp Example Build for different platforms
+
+Change-Id: Ie0d1b1471ee926e58253f951be4aec69d170a0cb
+------------------------------------------------------------------------
+r1442142 | veithm | 2013-02-04 15:51:51 +0100 (Mo, 04. Feb 2013) | 1 Zeile
+
+Adding DOAP file for project, renaming DOAP file for PMC
+------------------------------------------------------------------------
+r1442123 | veithm | 2013-02-04 15:08:40 +0100 (Mo, 04. Feb 2013) | 1 Zeile
+
+Adding DOAP files needed for creation of projects.apache.org website
+------------------------------------------------------------------------
+r1442105 | veithm | 2013-02-04 14:17:39 +0100 (Mo, 04. Feb 2013) | 2 Zeilen
+
+Removing incubator from website, updating links and text 
+
+------------------------------------------------------------------------
+r1441906 | veithm | 2013-02-03 13:17:49 +0100 (So, 03. Feb 2013) | 1 Zeile
+
+Updating skeleton template for new website location
+------------------------------------------------------------------------
+r1441904 | veithm | 2013-02-03 13:02:41 +0100 (So, 03. Feb 2013) | 1 Zeile
+
+Moving web site content up to content root folder
+------------------------------------------------------------------------
+r1440293 | danielsh | 2013-01-30 08:09:32 +0100 (Mi, 30. Jan 2013) | 1 Zeile
+
+Etch has become a TLP
+------------------------------------------------------------------------
+r1400862 | veithm | 2012-10-22 14:32:26 +0200 (Mo, 22. Okt 2012) | 3 Zeilen
+
+ETCH-243 Fixed small template related bug in code generation
+
+Change-Id: Ic7963da6bc3fdff6b1925a4e5e00534953cd7e84
+------------------------------------------------------------------------
+r1400861 | veithm | 2012-10-22 14:25:06 +0200 (Mo, 22. Okt 2012) | 5 Zeilen
+
+ETCH-245 Refactoring of ant/CMake build system of cpp-binding
+
+Introduction of toolchain files
+
+Change-Id: Ieaa654df10a20ce6cc69a3438b37c690b9e140a9
+------------------------------------------------------------------------
+r1399123 | veithm | 2012-10-17 08:51:35 +0200 (Mi, 17. Okt 2012) | 3 Zeilen
+
+ETCH-244 Fixing QueuedPool todo
+
+Change-Id: I43f88546ad2e6212e6fa6f99baa822c85107b46d
+------------------------------------------------------------------------
+r1399122 | veithm | 2012-10-17 08:51:30 +0200 (Mi, 17. Okt 2012) | 3 Zeilen
+
+ETCH-243 Small fixes in code generation
+
+Change-Id: Ie04cb8b984f9fe3cdc6979da06c9346615f868c2
+------------------------------------------------------------------------
+r1399121 | veithm | 2012-10-17 08:51:22 +0200 (Mi, 17. Okt 2012) | 3 Zeilen
+
+ETCH-243 Added same hash function for numeric datatypes
+
+Change-Id: If543cc7718e2548d44bac3e674bd0bb58fae65a1
+------------------------------------------------------------------------
+r1399120 | veithm | 2012-10-17 08:51:17 +0200 (Mi, 17. Okt 2012) | 5 Zeilen
+
+ETCH-246 Fixed multidimensional array serialization
+
+Serialization of empty values fixed
+
+Change-Id: I3c86300193e3db9bc5aee7be3033a3812d0870b9
+------------------------------------------------------------------------
+r1399119 | veithm | 2012-10-17 08:51:12 +0200 (Mi, 17. Okt 2012) | 5 Zeilen
+
+Etch-243 Added EtchByte operator=
+
+Useful in Stubhelpers
+
+Change-Id: I681f8fbceb6dd3f0d73cf4b60c0143c8340ac25e
+------------------------------------------------------------------------
+r1399118 | veithm | 2012-10-17 08:51:06 +0200 (Mi, 17. Okt 2012) | 5 Zeilen
+
+ETCH-243 Refactored EtchObjectType hashing
+
+Separate of hash and comparator functionality from EtchObject
+
+Change-Id: I499a46ad0d77899eccd54f41471e4e17b71eac42
+------------------------------------------------------------------------
+r1399117 | veithm | 2012-10-17 08:50:55 +0200 (Mi, 17. Okt 2012) | 3 Zeilen
+
+ETCH-243 Cleaned Up include dependencies
+
+Change-Id: I6630eac7565d4c7d1eff47eeaa0cd66a59a29c2e
+------------------------------------------------------------------------
+r1399116 | veithm | 2012-10-17 08:50:36 +0200 (Mi, 17. Okt 2012) | 7 Zeilen
+
+ETCH-243 Small Fixes
+
+Added virtual destructors
+Added custom HashTable sizes inside of EtchConfig.h
+Added some logging
+
+Change-Id: I97cc1778909d9882c2b42cf7833b02bd29dd2f0d
+------------------------------------------------------------------------
+r1399115 | veithm | 2012-10-17 08:50:24 +0200 (Mi, 17. Okt 2012) | 6 Zeilen
+
+ETCH-244 Adding runtime and logging to code generation templates
+
+- added Logging
+- refactored runtime usage
+
+Change-Id: I3b9e3b6faf76ca0b1089fa509933b68afebe2482
+------------------------------------------------------------------------
+r1399114 | veithm | 2012-10-17 08:50:01 +0200 (Mi, 17. Okt 2012) | 6 Zeilen
+
+ETCH-244 EtchRuntime refactoring
+
+replaced EtchRuntime::getRuntime with mRuntime given by the constructor
+Fixed Warnings under Linux
+
+Change-Id: I2a22bf7f0f3418ca2e1aa5a60921b4cbc2f80ada
+------------------------------------------------------------------------
+r1399113 | veithm | 2012-10-17 08:49:27 +0200 (Mi, 17. Okt 2012) | 6 Zeilen
+
+ETCH-243 Fixed bug in void function calls
+
+Changed Connection Checker in order to avoid Race Condition
+Enabling recreation of runtime if it has been destroyed before
+
+Change-Id: Ia7d16052af22a5f7a4dfa2ee0708506222add095
+------------------------------------------------------------------------
+r1399112 | veithm | 2012-10-17 08:49:14 +0200 (Mi, 17. Okt 2012) | 6 Zeilen
+
+ETCH-249 Added EtchNumber class
+
+Etch number types derive now from EtchNumber
+BinaryTaggedDataOutput uses EtchNumber to get the value
+
+Change-Id: I7a487dcab3e6f489083031008ca91912da7655d0
+------------------------------------------------------------------------
+r1399111 | veithm | 2012-10-17 08:48:53 +0200 (Mi, 17. Okt 2012) | 3 Zeilen
+
+ETCH-222 Refactored EtchObjectType hierarchy
+
+Change-Id: Ia0df372b9d34e300d7a87537bdc34ec77e291501
+------------------------------------------------------------------------
+r1399110 | veithm | 2012-10-17 08:48:21 +0200 (Mi, 17. Okt 2012) | 3 Zeilen
+
+ETCH-250 List refactoring
+
+Change-Id: If3d671e67bfeaa70ee310f0f7a7ee5000122ff74
+------------------------------------------------------------------------
+r1391408 | veithm | 2012-09-28 13:47:49 +0200 (Fr, 28. Sep 2012) | 1 Zeile
+
+ETCH-202 Added Wireshark preference window image
+------------------------------------------------------------------------
+r1391407 | veithm | 2012-09-28 13:46:43 +0200 (Fr, 28. Sep 2012) | 1 Zeile
+
+ETCH-202 Updated Tools page
+------------------------------------------------------------------------
+r1387904 | veithm | 2012-09-20 10:30:04 +0200 (Do, 20. Sep 2012) | 1 Zeile
+
+ETCH-202 Added News for cpp binding alpha version
+------------------------------------------------------------------------
+r1376589 | veithm | 2012-08-23 18:48:30 +0200 (Do, 23. Aug 2012) | 6 Zeilen
+
+ETCH-216 Small improvement in TcpConnection
+
+Avoiding QNX Sockets to fail while setting properties
+Fixed small bugs in code generation
+
+Change-Id: I2fe3a9dcae70525544f774f7ffc07facae9234fb
+------------------------------------------------------------------------
+r1376588 | veithm | 2012-08-23 18:48:16 +0200 (Do, 23. Aug 2012) | 5 Zeilen
+
+ETCH-198 Changes in helper and valuefactory
+
+Refactoring of life cycle and memory management
+
+Change-Id: If74bb9e43e0712fb8dca8cf52d364efa3d5d12a3
+------------------------------------------------------------------------
+r1376587 | fitzner | 2012-08-23 18:46:37 +0200 (Do, 23. Aug 2012) | 5 Zeilen
+
+ETCH-198 Changed remote compiler template
+
+Implemented initial client answers
+
+Change-Id: I2bc036e131e9b5e90ffd1a204b14f9b49c0cafc2
+------------------------------------------------------------------------
+r1376586 | fitzner | 2012-08-23 18:45:28 +0200 (Do, 23. Aug 2012) | 6 Zeilen
+
+ETCH-243 EtchRuntimeTest Warning Fix
+
+- warning fix EQ(false, foo())
+- Assert to Expect
+
+Change-Id: I5163338cc51b404427118ed3f709a3f9948ed19d
+------------------------------------------------------------------------
+r1376584 | fitzner | 2012-08-23 18:42:45 +0200 (Do, 23. Aug 2012) | 6 Zeilen
+
+ETCH-243 Added log messages to the binding-cpp
+
+- Added logger and some log messages
+- Added runtime to different components
+
+Change-Id: I68715800f8d6dab3cf65262debb0b7249b7c9724
+------------------------------------------------------------------------
+r1376511 | veithm | 2012-08-23 16:41:28 +0200 (Do, 23. Aug 2012) | 3 Zeilen
+
+ETCH-112 Preventing infinite static initialization loop on linux
+
+Change-Id: Iab3972bd0f37ecda4394d74c4b4103c2de21d921
+------------------------------------------------------------------------
+r1376510 | fitzner | 2012-08-23 16:39:37 +0200 (Do, 23. Aug 2012) | 5 Zeilen
+
+ETCH-243 Added Default Console Appender
+
+- Logging functionality to server side of HelloWorld added
+
+Change-Id: I690777f5b060876f2535228d4faec4c0531f3dd3
+------------------------------------------------------------------------
+r1376507 | fitzner | 2012-08-23 16:34:07 +0200 (Do, 23. Aug 2012) | 7 Zeilen
+
+ETCH-243 HelloWorld Linux build was fixed
+
+- added copy of .a capu Lib
+- added chmod +x for copied exetuables
+- changed lib path from Etch to the Linux 32bit capu version
+
+Change-Id: I38748e3c9ca3165b6dfa4c44e94d264f83654889
+------------------------------------------------------------------------
+r1368972 | veithm | 2012-08-03 16:15:03 +0200 (Fr, 03. Aug 2012) | 6 Zeilen
+
+Added build.type switch to HelloWorld example
+
+Avoiding the build of the experimental cpp HelloWorld example
+in stable builds
+
+Change-Id: I4d4f9c0ae353bbe140aed0c7c4dd2479e6b911cc
+------------------------------------------------------------------------
+r1368576 | veithm | 2012-08-02 18:18:09 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+Restructuring of Etch HelloWorld Example
+
+Change-Id: Id4cea0ac9f9fa4e045dc345e958c936aa68a3bdc
+------------------------------------------------------------------------
+r1368575 | veithm | 2012-08-02 18:17:22 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-207 Removed some warnings in Linux build
+
+Change-Id: If9fdb4010d214fb7202e062ad4001e20fa8adc7d
+------------------------------------------------------------------------
+r1368574 | veithm | 2012-08-02 18:17:14 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+Updated Compiler Version String to 1.3.0
+
+Change-Id: I76a3e39dc36c8f382646f24652ae079217a6116e
+------------------------------------------------------------------------
+r1368573 | veithm | 2012-08-02 18:17:08 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-132 Enabled copy of OS Abstraction capu to dist folder
+
+Capu headers and libs are now copied into the dist folder
+
+Change-Id: Ic2d9551f95caf6f9e315c0c70de92c682998af2e
+------------------------------------------------------------------------
+r1368572 | veithm | 2012-08-02 18:17:03 +0200 (Do, 02. Aug 2012) | 6 Zeilen
+
+ETCH-198 ETCH-195 Implementation of cpp compiler
+
+Added compiler implementation
+Added velocity templates used for code generation
+
+Change-Id: I86af43a7b93f34e55779b5c4787038851ff22c1f
+------------------------------------------------------------------------
+r1368571 | veithm | 2012-08-02 18:16:44 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-147 Different small improvements and bug fixes
+
+Change-Id: I939ae33e0b9974435401f7e9f5f281f1c53427aa
+------------------------------------------------------------------------
+r1368570 | veithm | 2012-08-02 18:16:35 +0200 (Do, 02. Aug 2012) | 6 Zeilen
+
+ETCH-235 Implementation of AsyncResult classes
+
+Added EtchAsyncResultNone for void methods
+Added EtchAsyncResult for methods with return value
+
+Change-Id: I07c6328256fd7d2399e46feb0568eb2fe93b1972
+------------------------------------------------------------------------
+r1368569 | veithm | 2012-08-02 18:16:27 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-241 Enabling build of single binding
+
+Added new target debug-binding to build.xml
+
+Change-Id: Idef7f5d787a260e8bbdcb4a78b2721e61ef06688
+------------------------------------------------------------------------
+r1368557 | veithm | 2012-08-02 17:45:56 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-147 Small bug fixes
+
+Added EtchValidators file
+
+Change-Id: I0b76a7d7e624d6b532711882b19797baa5db70c1
+------------------------------------------------------------------------
+r1368556 | veithm | 2012-08-02 17:45:44 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-180 Fixed some minor bugs in packetizer
+
+Change-Id: Id4cea52d7cf5b7e8df6b48d66cb0d65466995553
+------------------------------------------------------------------------
+r1368555 | fitzner | 2012-08-02 17:42:44 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-207 Implementation of OS file abstraction
+
+Change-Id: I2e74f147231077d1ae5e7712a03834ccc0724ab4
+------------------------------------------------------------------------
+r1368550 | veithm | 2012-08-02 17:37:33 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-204 Updated .gitignore and .classpath
+
+removed tracking from CompilerVersion.java
+
+Change-Id: I8d260234878371ea95939c8688d458c2ee0dfe53
+------------------------------------------------------------------------
+r1368549 | veithm | 2012-08-02 17:37:22 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-181 EtchNativeArray fix
+
+Valgrind error has been fixed
+
+Change-Id: I3821be665b3b88c1b0227aff742d257c68df7bee
+------------------------------------------------------------------------
+r1368548 | veithm | 2012-08-02 17:37:16 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-137 Changed int type to capu int32_t type
+
+Change-Id: I228385bf8f8832bc3f89316f1d532be4b00b5e07
+------------------------------------------------------------------------
+r1368547 | veithm | 2012-08-02 17:37:10 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-149 Added EtchWho
+
+Change-Id: I34d9ab88cead566de995c4ec7e8e0966e6307c37
+------------------------------------------------------------------------
+r1368546 | veithm | 2012-08-02 17:36:55 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-240 Changing Static Initialization
+
+replaced static fields with methods in order to have a deterministic static initialization order
+
+Change-Id: I14dab27ee3ac9f04f9f1ba3eda45a2955d6a84b9
+------------------------------------------------------------------------
+r1368545 | veithm | 2012-08-02 17:36:28 +0200 (Do, 02. Aug 2012) | 6 Zeilen
+
+ETCH-133 Added Typedefs to SmartPointers for EtchCollections
+
+typedefs as <Type>Ptr are used in code generation and are visible in user
+code
+
+Change-Id: I5e77d6d7cdb55e5c88b67c3847d1c7e51e153921
+------------------------------------------------------------------------
+r1368544 | veithm | 2012-08-02 17:36:21 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-184 Minor improvements in EtchStructValue and EtchType
+
+Added const to some get methods
+
+Change-Id: Id5bbf50ef722af4e54bf0ba38edc7214d9d9c3db
+------------------------------------------------------------------------
+r1368543 | fitzner | 2012-08-02 17:33:40 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-147 EtchRuntime Implementation and updates for memory management
+
+Change-Id: Ic9acda9427c2a44eaeffac1c5f01a01d9c276e67
+------------------------------------------------------------------------
+r1368538 | veithm | 2012-08-02 17:29:33 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-173 Added getter in TcpOption
+
+Change-Id: Ifcb991cb3e855d63de6da63de72b5990ce670797
+------------------------------------------------------------------------
+r1368537 | fitzner | 2012-08-02 17:28:14 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-149 EtchIdGenerator change to uint64
+
+Change-Id: Id28806a17de08cf84df3b60e1e93cba156a88580
+------------------------------------------------------------------------
+r1368536 | fitzner | 2012-08-02 17:25:39 +0200 (Do, 02. Aug 2012) | 7 Zeilen
+
+ETCH-147 EtchStructValue Changes
+
+=> added const EtchField to get method
+=> getFirstField()
+=> isEmpty()
+
+Change-Id: I0ea91264b113ab0bde952092f71689f3aef5d16b
+------------------------------------------------------------------------
+r1368533 | fitzner | 2012-08-02 17:24:57 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-147 EtchException create by value
+
+- EtchString constructor now by value this makes EtchException(EtchString("ERROR!")); possible
+
+Change-Id: I535519b31fca6bc754e9c6c05e6d28a4473ec830
+------------------------------------------------------------------------
+r1368530 | fitzner | 2012-08-02 17:24:14 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-147 EtchStack Implementation
+
+- Memory Handling of Stacks
+
+Change-Id: I1f6133e0540f271ded788e96ae1409291ec00413
+------------------------------------------------------------------------
+r1368526 | veithm | 2012-08-02 17:19:23 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-132 Fix for thread-safeness of SmartPointer
+
+Added return value to atomic operations which returns the old value
+
+Change-Id: Ic49cb5fb274fdecf1db9ceec7a54769c16674df8
+------------------------------------------------------------------------
+r1368525 | veithm | 2012-08-02 17:19:12 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-197 Added destroyRessources method to TransportHelper
+
+Change-Id: I78bccba944d316bb76aeaa4b672ccd2e13af65d3
+------------------------------------------------------------------------
+r1368524 | veithm | 2012-08-02 17:19:05 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-147 ExceptionFactory added
+
+Returns RuntimeException Object by error code
+
+Change-Id: I5ff11e6815eb4fc36329b77f63f2636cd9faf97a
+------------------------------------------------------------------------
+r1368523 | veithm | 2012-08-02 17:18:59 +0200 (Do, 02. Aug 2012) | 6 Zeilen
+
+ETCH-147 Added some notifications to EtchConnection
+
+Added Session Up and Session Down notifications
+Using EtchMonitor in WaitUp and WaitDown now
+
+Change-Id: I8a9a91b2b5d8d7ebe4ee2425a14cd2321c34b94b
+------------------------------------------------------------------------
+r1368522 | veithm | 2012-08-02 17:18:51 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-132 Added some operators to EtchInt32
+
+Change-Id: I63c32edbf69d32659331082aa9f14d0ca0db8c88
+------------------------------------------------------------------------
+r1368521 | veithm | 2012-08-02 17:18:44 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-145 Small changes in socket implementation
+
+Change-Id: Id3f4ecd3559dac79c1e78d32929bf5218f56146c
+------------------------------------------------------------------------
+r1368518 | fitzner | 2012-08-02 17:15:58 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+EtchValidatorCustom is implemented
+
+Change-Id: Ifdd9fce222bb4574d56b3c41575f1f418d52f968
+------------------------------------------------------------------------
+r1368517 | fitzner | 2012-08-02 17:13:36 +0200 (Do, 02. Aug 2012) | 7 Zeilen
+
+ETCH-141: EtchThreadPools and Implementation of StubBase
+
+- Implementation of ThreadPool Wrappers for ETCH
+=> EtchFreePool: n Threads at a time, further Threads are not accepted (not queued)
+=> EtchQueuedPool: 1 Thread at a time, Queued to unlimited list
+
+Change-Id: I408f8a3bbe24d51fe96919aee30b30849ef68376
+------------------------------------------------------------------------
+r1368516 | veithm | 2012-08-02 17:10:39 +0200 (Do, 02. Aug 2012) | 7 Zeilen
+
+ETCH-141 ThreadPool Implementation
+
+Implementation and tests of ThreadPool
+Change of Thread interface
+Added getState to Thread
+
+Change-Id: I96a552154bd0aba4d9ee914cf2ff027c980b92e2
+------------------------------------------------------------------------
+r1368513 | fitzner | 2012-08-02 17:09:56 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-197: Implementation of Remote base and some other improvements
+
+Implementation of Remote Base and some improvements
+
+Change-Id: Ibd7edc42d18f27b8b5277d041b186cced67080bb
+------------------------------------------------------------------------
+r1368510 | veithm | 2012-08-02 17:05:59 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-237 Added FailonError attribute to exec task
+
+Change-Id: I0ef92fd5f940179ece0cccd236931b69379419a6
+------------------------------------------------------------------------
+r1368509 | veithm | 2012-08-02 17:05:53 +0200 (Do, 02. Aug 2012) | 6 Zeilen
+
+ETCH-215 Implementation of DeliveryService
+
+Added DeliveryService interface
+Added DefaultDeliveryService implementation
+
+Change-Id: I304e567e6492613631f63e3b22fccdd6940c97a6
+------------------------------------------------------------------------
+r1368508 | fitzner | 2012-08-02 17:04:41 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-149: EtchMonitor Implementation
+
+Change-Id: Ia81de91f0752092874c3651fc1ce247e9ab13057
+------------------------------------------------------------------------
+r1368507 | fitzner | 2012-08-02 17:03:46 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-149 Enhanced UTF8 Support
+
+EtchString modifications for UTF8 support
+
+Change-Id: Idacf1dd320ba9143b9bf32ba9072f7e11f55f75b
+------------------------------------------------------------------------
+r1368505 | veithm | 2012-08-02 17:00:18 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-134 Fixed time bug
+
+Change-Id: Idd8d61bd5352832e1a88b405ac5f65223f36ab94
+------------------------------------------------------------------------
+r1368504 | veithm | 2012-08-02 16:59:08 +0200 (Do, 02. Aug 2012) | 6 Zeilen
+
+ETCH-216 : Implementation of EtchTransportFactories
+
+- EtchTransportFactory (basic Interface)
+- EtchTCPTransportFactory
+
+Change-Id: Iee18c9c7ee176fdcc0c9e649f305181a9d32a351
+------------------------------------------------------------------------
+r1368503 | fitzner | 2012-08-02 16:57:46 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-214: Implementation of EtchMailboxManager
+
+EtchMailboxManager Implementation
+
+Change-Id: I2022932d3437255968b4b3e44c50ab928657a6ec
+------------------------------------------------------------------------
+r1368502 | fitzner | 2012-08-02 16:56:38 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-149: EtchIdGenerator Implementation
+
+Change-Id: I4cb22b3e6d7e1e655d10323e505415d5c67d9a30
+------------------------------------------------------------------------
+r1368498 | fitzner | 2012-08-02 16:53:36 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-134: EtchCircularQueue Implementation
+
+EtchCircularQueue has been implemented
+
+Change-Id: I04c2c7f3fec88037f06549e0eb67cf11ab0d9d1e
+------------------------------------------------------------------------
+r1368497 | veithm | 2012-08-02 16:50:54 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-143 Fixed condition variable bug on Windows
+
+Change-Id: I3cbb89d1e7bf2904ef1a1a4e2bb2694a89c332d4
+------------------------------------------------------------------------
+r1368496 | fitzner | 2012-08-02 16:49:30 +0200 (Do, 02. Aug 2012) | 3 Zeilen
+
+ETCH-132 Capu: List Performance Optimization
+
+Change-Id: I035eaad4162c6f98a7384eeba33068c0f017d064
+------------------------------------------------------------------------
+r1368491 | veithm | 2012-08-02 16:40:08 +0200 (Do, 02. Aug 2012) | 11 Zeilen
+
+ETCH-132 Major changes in platform abstraction
+
+Restructuring of os specific file hierarchy
+Added QNX, Linux ARMv7 and Integrity ARMv7 support
+
+Added Array, Ringbuffer and Queue containers
+Added Math abstraction
+
+Fixed warnings on windows Visual Studio build
+
+Change-Id: Ifeb6d9a68452532de359a8d5305db1794d28ed29
+------------------------------------------------------------------------
+r1368489 | fitzner | 2012-08-02 16:36:39 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-213: Implementation of EtchServerFactories
+
+First implementation
+
+Change-Id: Id5d13aca235a1940ed2479614b9775f98864b3e7
+------------------------------------------------------------------------
+r1368486 | fitzner | 2012-08-02 16:33:26 +0200 (Do, 02. Aug 2012) | 7 Zeilen
+
+ETCH-197: Implementation of Remote base
+
+- EtchRemoteBase skeleton added
+- EtchTransportHelper skeleton added
+- EtchQueuedPool skeleton added
+
+Change-Id: I466efeac6b9ec28a0259450bf35d0fc450a9c722
+------------------------------------------------------------------------
+r1368475 | fitzner | 2012-08-02 16:01:26 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-141: EtchFreePool skeleton implementation
+
+Skeleton implementation of EtchFreePool
+
+Change-Id: Ifb5ccb3fb8cad708df435e210d1c524610a8abe6
+------------------------------------------------------------------------
+r1368474 | fitzner | 2012-08-02 15:51:29 +0200 (Do, 02. Aug 2012) | 6 Zeilen
+
+ETCH-141: EtchPool Interface
+
+Added Interface for EtchPool
+Added Interface for EtchPoolRunnable
+
+Change-Id: Iefc2950e2b98e9063e268a6342cc5f0af39cf553
+------------------------------------------------------------------------
+r1368468 | veithm | 2012-08-02 15:31:50 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-196 Implementation of Stub Base classes
+
+Added Basic interfaces
+
+Change-Id: I8b07b246644e788b4e314bbb2d584a0ca69e6190
+------------------------------------------------------------------------
+r1368467 | veithm | 2012-08-02 15:30:25 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-147 Added SmartPointer Typedefs
+
+Added EtchXXXPtr typedefs to each etch type
+
+Change-Id: Id9bd49cfc170f5df9266be4c2358b3f9b41fd4f7
+------------------------------------------------------------------------
+r1368466 | veithm | 2012-08-02 15:28:50 +0200 (Do, 02. Aug 2012) | 5 Zeilen
+
+ETCH-181 Implementation Messagizer
+
+EtchMessagizer implementation and testing
+
+Change-Id: I42cd4e73b834a24719d0207938e505932f2299e2
+------------------------------------------------------------------------
+r1368460 | veithm | 2012-08-02 15:20:50 +0200 (Do, 02. Aug 2012) | 6 Zeilen
+
+ETCH-181 EtchBinaryTaggedData Implementation
+
+BinaryTaggedData Implementation and Tests
+EtchNoneValidator Implementation
+
+Change-Id: I553f6d6705ebd1491fbc4b4b83cb12358337eb42
+------------------------------------------------------------------------
+r1345149 | veithm | 2012-06-01 15:06:15 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Validators updated to smartpointers
+
+methods validate and validateValue updated to smartpointers
+
+Change-Id: I12184179d0c5a5d8ea59dc6fba0e34e644fc14f2
+------------------------------------------------------------------------
+r1345146 | veithm | 2012-06-01 14:57:34 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-181 EtchTaggedData Interfaces
+
+Change-Id: Ida69e5a7e13b5b515ca0ca2165114b4e15e2dba1
+------------------------------------------------------------------------
+r1345144 | veithm | 2012-06-01 14:54:41 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+EtchUtil UTF-8 support
+
+Change-Id: I244540a4543aaae31c03e9945ade09b4b9eae7a1
+------------------------------------------------------------------------
+r1345142 | veithm | 2012-06-01 14:52:12 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-185 EtchStructValueValidator has been implemented
+
+Change-Id: Idb10131de70bf1dc1f932f31e3aa58c751a52d8f
+------------------------------------------------------------------------
+r1345139 | veithm | 2012-06-01 14:49:15 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-181 EtchArrayValue Implementation and Native Array Improvements.
+
+Change-Id: Idee8fa3307ba8ec08d6a702336385b9941cd803c
+------------------------------------------------------------------------
+r1345133 | veithm | 2012-06-01 14:46:13 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-184 Implementation of EtchDefaultValueFactory
+
+EtchDefaultValueFactory has been implemented
+
+Change-Id: I9c903e5ca4bb95f13437cd501cbc4f9ae2de3f0c
+------------------------------------------------------------------------
+r1345128 | veithm | 2012-06-01 14:38:24 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-182 EtchMessage has been implemented
+
+Change-Id: I0949369a36b29eab63dd6f35a849138fd95aa750
+------------------------------------------------------------------------
+r1345121 | veithm | 2012-06-01 14:35:56 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-184 Implementation of EtchDateSerializer
+
+EtchDateSerializer has been implemented
+
+Change-Id: I1d786ee32af263c4f4c4e8bc4161c79ce7a20f3b
+------------------------------------------------------------------------
+r1345118 | veithm | 2012-06-01 14:31:49 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-150 Implementation of basic primitive data types for the NSDL
+
+EtchDate has been implemented
+
+Change-Id: I3bdf8138a7a2cb30ab65b099c5e2ba4f353d2cba
+------------------------------------------------------------------------
+r1345115 | veithm | 2012-06-01 14:26:35 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-184 Implementation of EtchSetSerializer
+
+EtchSetSerializer has been implemented
+
+Change-Id: Icf22a13854e120f7149fbeec14bbde654559584a
+------------------------------------------------------------------------
+r1345114 | veithm | 2012-06-01 14:23:30 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-184 Implementation of EtchHashTableSerializer
+
+Change-Id: I89d528ffedfd0937a93f636cd825f2df3cd38016
+------------------------------------------------------------------------
+r1345107 | veithm | 2012-06-01 14:20:06 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-184 Implementation of EtchAuthenticationExceptionSerializer
+
+Change-Id: Ieafb65cb34a65fec7db50250918689f9509eea1a
+------------------------------------------------------------------------
+r1345104 | veithm | 2012-06-01 14:18:02 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-184 Implementation of EtchRuntimeExceptionSerializer
+
+Change-Id: I45704bd54ef2c5f318009e7b41ad7813d1745d03
+------------------------------------------------------------------------
+r1345101 | veithm | 2012-06-01 14:15:49 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-185 EtchValidatorRuntimeException is implemented
+
+Change-Id: I45d7f473166c5d9708c41936e364d975cd83e594
+------------------------------------------------------------------------
+r1345099 | fitzner | 2012-06-01 14:12:47 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-184 Implementation of EtchRuntimeException
+
+EtchRuntimeException has been implemented
+
+Change-Id: Icfb9729c8e4a3d58b3f9720f563afe251ec12efe
+------------------------------------------------------------------------
+r1345098 | fitzner | 2012-06-01 14:11:59 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-184 Implementation of EtchAuthenticationException
+
+EtchAuthenticationException has been implemented
+
+Change-Id: I5dac9912a4106376fe1fc4250f686b49746ff42e
+------------------------------------------------------------------------
+r1345097 | fitzner | 2012-06-01 14:11:15 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-184 Implementation of EtchException
+
+EtchException and EtchExceptionType are created
+
+Change-Id: I39cfcc5fb62bf6f8f28562a8c84fc3724cf71a18
+------------------------------------------------------------------------
+r1345095 | fitzner | 2012-06-01 14:08:53 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-184 EtchListSerializer Implementation
+
+EtchListSerializer implementation
+
+Change-Id: I592d93cb1a30cc977db6da13c176f60b34ffaae1
+------------------------------------------------------------------------
+r1345092 | fitzner | 2012-06-01 14:01:19 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-139 Implementation of EtchNativeArray
+
+New native array implementation
+
+Change-Id: I7ab41641ca727a9c43ccf5312837a36bd029f8d9
+------------------------------------------------------------------------
+r1345087 | fitzner | 2012-06-01 13:47:57 +0200 (Fr, 01. Jun 2012) | 6 Zeilen
+
+ETCH-184 EtchClass2TypeMap has been implemented
+
+- EtchClass2TypeMap has been implemented
+- Etch type handling was changed
+
+Change-Id: I2b133c216a77f63ef7baa4eabb7fa3d085dd0911
+------------------------------------------------------------------------
+r1345079 | fitzner | 2012-06-01 13:42:00 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-184 EtchTypeCollection has been implemented
+
+Change-Id: Ib6b57d6d2d2a930f18d4330234fcc242891a4744
+------------------------------------------------------------------------
+r1345078 | fitzner | 2012-06-01 13:41:18 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-184 EtchStructValue implementation and tests
+
+Change-Id: I191d47ee0dae0b64c7cdcf02be6f3dfb891ce3ab
+------------------------------------------------------------------------
+r1345077 | fitzner | 2012-06-01 13:40:23 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-184 EtchType has been implemented
+
+Change-Id: Ib02766b5665d6474d7e61d9d11a989d7bf9a21fe
+------------------------------------------------------------------------
+r1345074 | fitzner | 2012-06-01 13:38:32 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-184 Interfaces of EtchValueFactory and EtchImportExportHelper
+
+Change-Id: Id315807b90bbc3ea608254fb278fe67b442006c5
+------------------------------------------------------------------------
+r1345073 | fitzner | 2012-06-01 13:36:12 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-184 Implementation ValueFactory
+
+EtchFieldMap has been implemented
+
+Change-Id: I3cdc834e18b242c966d11ebee6f88c8add08cdd4
+------------------------------------------------------------------------
+r1345071 | fitzner | 2012-06-01 13:29:23 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+Object Validator has been implemented
+
+Change-Id: I85a85d1a8c4592b499c8abb616bd75bd7d694250
+------------------------------------------------------------------------
+r1345068 | veithm | 2012-06-01 13:26:45 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-184 Implementation ValueFactory
+
+EtchField Implementation and EtchHash and EtchNativeArray fix
+
+Change-Id: Ib14874382dc48bd1eb4834b29e033fb4701e5f0d
+------------------------------------------------------------------------
+r1345067 | veithm | 2012-06-01 13:23:35 +0200 (Fr, 01. Jun 2012) | 7 Zeilen
+
+ETCH-194 Definition of Etch Enumerations
+
+EtchAsyncMode
+EtchLevel
+EtchDirection
+
+Change-Id: Ie22581111471b5ff0521217d8c90ddd20960855a
+------------------------------------------------------------------------
+r1345065 | fitzner | 2012-06-01 13:20:47 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+Combo Validator has been implemented
+
+Change-Id: Ib5a0d78eb9c88836ddaef8d75cfc46b58e12e24e
+------------------------------------------------------------------------
+r1345064 | fitzner | 2012-06-01 13:19:38 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+String Validator has been implemented
+
+Change-Id: Ib1000436426d5f2578c27bf57ded0b63232f07fd
+------------------------------------------------------------------------
+r1345062 | fitzner | 2012-06-01 13:18:47 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+Long Validator has been implemented
+
+Change-Id: Ic31b39b1219b77cafb644d2a5b6ad1cf971cb115
+------------------------------------------------------------------------
+r1345061 | fitzner | 2012-06-01 13:17:32 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+Double Validator has been implemented by Aaron
+
+Change-Id: I656bfd248492f993215af8d53984173433b26925
+------------------------------------------------------------------------
+r1345060 | fitzner | 2012-06-01 13:16:56 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+Float Validator has been implemented by Aaron
+
+Change-Id: I5236b67eaebd3d589132e5b6698ebdfa2f32054b
+------------------------------------------------------------------------
+r1345056 | fitzner | 2012-06-01 13:16:14 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+Short Validator has been implemented
+
+Change-Id: Ic019f99ca254fafcf5cea2c81247fb556958fa7f
+------------------------------------------------------------------------
+r1345055 | fitzner | 2012-06-01 13:15:33 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+Integer Validator has been implemented
+
+Change-Id: I9d0fdb1e668e638dedaa94b7990a604b27090eee
+------------------------------------------------------------------------
+r1345054 | fitzner | 2012-06-01 13:13:42 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+Byte Validator has been implemented
+
+Change-Id: Ieb93770892b1217945af10906dbf20e05b45b3ef
+------------------------------------------------------------------------
+r1345053 | fitzner | 2012-06-01 13:12:48 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+Boolean Validator has been implemented
+
+Change-Id: I25da9402acde0346a0c20f76286c2acdb9a550dc
+------------------------------------------------------------------------
+r1345051 | fitzner | 2012-06-01 13:10:46 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+Abstract Base Classes for validators are implemented fix
+
+Change-Id: If9cde20f2b73e8db21936736299840f0a20ea46d
+------------------------------------------------------------------------
+r1345050 | fitzner | 2012-06-01 13:09:22 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-185 Implementation Validators
+
+Abstract Base Classes for validators are implemented
+
+Change-Id: Iaf8ac1217de1a9f5ffb15fcc33012b54cb148ebe
+------------------------------------------------------------------------
+r1345047 | fitzner | 2012-06-01 13:05:17 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-149: Added Numeric Limits
+
+Basic implementation of Numeric_Limits for Float
+
+Change-Id: I9c7c68fef531092e32ed6468d9c4658ab2185fa1
+------------------------------------------------------------------------
+r1345045 | veithm | 2012-06-01 12:50:16 +0200 (Fr, 01. Jun 2012) | 5 Zeilen
+
+ETCH-182 Implementation Session Interfaces
+
+EtchSession Interfaces improvements
+
+Change-Id: I6f4614c5e521a0cecfe4f8478c03694faa8783a5
+------------------------------------------------------------------------
+r1345043 | veithm | 2012-06-01 12:45:20 +0200 (Fr, 01. Jun 2012) | 3 Zeilen
+
+ETCH-180 Packetizer Implementation
+
+Change-Id: Ia166b490a37a732a687c201a100c015a915b1116
+------------------------------------------------------------------------
+r1326501 | veithm | 2012-04-16 08:13:59 +0200 (Mo, 16. Apr 2012) | 1 Zeile
+
+ETCH-202 Added note for building Etch on Linux 64-bit systems
+------------------------------------------------------------------------
+r1301136 | sccomer | 2012-03-15 19:48:09 +0100 (Do, 15. Mär 2012) | 5 Zeilen
+
+some small changes to scripts to make them work better. and a new script to help with cunit installation.
+
+ignoring build product from example_mixin.
+
+added some svn:eol-style=native properties where needed.
+------------------------------------------------------------------------
+r1300957 | fitzner | 2012-03-15 13:36:12 +0100 (Do, 15. Mär 2012) | 4 Zeilen
+
+ETCH-224 Changed version inside the APR library because of wrong
+workspace settingsETCH-224 Changed version inside the APR library
+
+Change-Id: Ib6a16bc2c75af0e309e518cf12d56579b2209467
+------------------------------------------------------------------------
+r1296073 | veithm | 2012-03-02 08:34:18 +0100 (Fr, 02. Mär 2012) | 5 Zeilen
+
+ETCH-173 EtchTransport Layer Implementation and Tests
+
+EtchTcpConnection, EtchTcpListener and EtchTcpOption has been implemented
+
+Change-Id: Ia7ef1c9a693b2e54b9e8a316c33d13d3098f048a
+------------------------------------------------------------------------
+r1296072 | veithm | 2012-03-02 08:32:51 +0100 (Fr, 02. Mär 2012) | 5 Zeilen
+
+ETCH-182 Implementation Session Interfaces
+
+Improvement of EtchSessionListener
+
+Change-Id: I8ccd227820b91860878b0ef72476d9ef9096700f
+------------------------------------------------------------------------
+r1296071 | veithm | 2012-03-02 08:32:09 +0100 (Fr, 02. Mär 2012) | 5 Zeilen
+
+ETCH-150 Implementation of basic primitive data types for the NSDL
+
+some neccessary fixes
+
+Change-Id: I2fb79dc482150dfd5b1f43ea33aa2b0e57d85ccc
+------------------------------------------------------------------------
+r1296070 | veithm | 2012-03-02 08:29:17 +0100 (Fr, 02. Mär 2012) | 5 Zeilen
+
+ETCH-145 EtchSocket Implementation
+
+Etch ServerSocket Typeid Fix
+
+Change-Id: I7843d5863715e578e94912693a7791de8d05747a
+------------------------------------------------------------------------
+r1296069 | veithm | 2012-03-02 08:28:32 +0100 (Fr, 02. Mär 2012) | 3 Zeilen
+
+ETCH-174 EtchResources Implementation Improvement of EtchResources
+
+Change-Id: I19092b4fc7507f970b0b229a7696cacad68e07fc
+------------------------------------------------------------------------
+r1296068 | veithm | 2012-03-02 08:27:42 +0100 (Fr, 02. Mär 2012) | 3 Zeilen
+
+ETCH-183 Implementation Transport Interfaces
+
+Change-Id: I0dd5a5c223ea162968dda89bf1149304b2343fa7
+------------------------------------------------------------------------
+r1296067 | veithm | 2012-03-02 08:22:43 +0100 (Fr, 02. Mär 2012) | 3 Zeilen
+
+ETCH-182 Implementation Session Interfaces
+
+Change-Id: I4f50f851dfb10d07858184c7ff4f88239b44940f
+------------------------------------------------------------------------
+r1296066 | veithm | 2012-03-02 08:21:24 +0100 (Fr, 02. Mär 2012) | 3 Zeilen
+
+ETCH-174 EtchFlexBuffer Implementation and Tests
+
+Change-Id: I76a0e82d941d36bafddc3cc2dadd39da1ea4c2d3
+------------------------------------------------------------------------
+r1296065 | veithm | 2012-03-02 08:19:05 +0100 (Fr, 02. Mär 2012) | 5 Zeilen
+
+ETCH-150 Implementation of basic primitive data types for the NSDL
+
+Major TypeID Update, EtchObjectType is created.
+
+Change-Id: Iad69302aedc83e949fa80394e894ce166d36f6f1
+------------------------------------------------------------------------
+r1295703 | veithm | 2012-03-01 18:47:05 +0100 (Do, 01. Mär 2012) | 6 Zeilen
+
+ETCH-149 SmartPointer
+
+Enabled assignment of different, but castable type
+Added equals operator
+
+Change-Id: I876a21d1f39d0a7392981889f7311c799f15431c
+------------------------------------------------------------------------
+r1295701 | veithm | 2012-03-01 18:45:35 +0100 (Do, 01. Mär 2012) | 5 Zeilen
+
+ETCH-174 EtchResources Implementation
+
+Updated container interfaces to references
+
+Change-Id: Iade864c2d860febbe9142d8efb8861f026cd7f9b
+------------------------------------------------------------------------
+r1295697 | veithm | 2012-03-01 18:42:10 +0100 (Do, 01. Mär 2012) | 3 Zeilen
+
+ETCH-174 EtchURL Implementation & Tests
+
+Change-Id: I99aa2c97110f3ed743b07daba7b1dd30d34a10d8
+------------------------------------------------------------------------
+r1295682 | fitzner | 2012-03-01 18:15:54 +0100 (Do, 01. Mär 2012) | 5 Zeilen
+
+ETCH-209
+CMake build for 32 bit executables on a 64 bit machine with Ubuntu 11.10
+fails. Fixed library order
+
+Change-Id: I2366691a94d6596a0450ae4bd1d4a8c7c85c6657
+------------------------------------------------------------------------
+r1242021 | fitzner | 2012-02-08 19:04:26 +0100 (Mi, 08. Feb 2012) | 1 Zeile
+
+ETCH-202 Added Thomas Marsh to the website
+------------------------------------------------------------------------
+r1241828 | veithm | 2012-02-08 10:15:01 +0100 (Mi, 08. Feb 2012) | 5 Zeilen
+
+ETCH-145 EtchSocket Wrapper
+
+capu socket wrapper for etch project
+
+Change-Id: I320fd828903d5cf69a97e4dd0fbea130d36d645f
+------------------------------------------------------------------------
+r1241827 | veithm | 2012-02-08 10:14:09 +0100 (Mi, 08. Feb 2012) | 5 Zeilen
+
+ETCH-145 Implementation of OS independent Sockets
+
+Socket and ServerSocket for blocking IO
+
+Change-Id: I53f6259271471b7a0cda7dc6150921728fa54a4e
+------------------------------------------------------------------------
+r1241804 | veithm | 2012-02-08 08:55:39 +0100 (Mi, 08. Feb 2012) | 5 Zeilen
+
+ETCH-132 OS Abstraction for binding-cpp
+
+Windows part fix
+
+Change-Id: Ie8bb4cde9122c9baa77fbb882d30c986f5ca91ce
+------------------------------------------------------------------------
+r1241803 | veithm | 2012-02-08 08:49:04 +0100 (Mi, 08. Feb 2012) | 3 Zeilen
+
+ETCH-138 EtchSet Wrapper
+
+Change-Id: Ie3537de235aacc96d80002e506ab7fbf04f86180
+------------------------------------------------------------------------
+r1241802 | veithm | 2012-02-08 08:47:16 +0100 (Mi, 08. Feb 2012) | 5 Zeilen
+
+ETCH-138 CAPU Set Implementation and Test
+
+HashSet Implementation and Tests
+
+Change-Id: I701f314060b99ee2f834bda6670833b187df323a
+------------------------------------------------------------------------
+r1241801 | veithm | 2012-02-08 08:46:01 +0100 (Mi, 08. Feb 2012) | 7 Zeilen
+
+ETCH-137 HashTable Etch Wrapper
+
+Added HashTable Wrapper
+Added Type Traits
+Added References to List and Hashtable
+
+Change-Id: Ic9bb4975296817baed8ec5c925be795980bcb8f4
+------------------------------------------------------------------------
+r1236669 | veithm | 2012-01-27 14:05:49 +0100 (Fr, 27. Jan 2012) | 3 Zeilen
+
+ETCH-210 Fixed URLs of buildserver in BUILD.txt
+
+Change-Id: I2e76e34f86eca71ca7d73270432b49daf471e22d
+------------------------------------------------------------------------
+r1232486 | veithm | 2012-01-17 18:09:46 +0100 (Di, 17. Jan 2012) | 3 Zeilen
+
+ETCH-202 Added svn-eol advice to source page
+
+Change-Id: I6d5801231638e9fc0a529373a655afbe395d7820
+------------------------------------------------------------------------
+r1230613 | fitzner | 2012-01-12 17:14:43 +0100 (Do, 12. Jan 2012) | 2 Zeilen
+
+ETCH-204
+Changed to next version tag
+------------------------------------------------------------------------
+r1230611 | fitzner | 2012-01-12 17:10:54 +0100 (Do, 12. Jan 2012) | 2 Zeilen
+
+ETCH-204
+correct some line endings
+------------------------------------------------------------------------
+r1230469 | veithm | 2012-01-12 11:10:08 +0100 (Do, 12. Jan 2012) | 3 Zeilen
+
+ETCH-137 CAPU HashTable Implementation and Tests
+
+Change-Id: Ia0fded93b5b9be83a994eced4f2b10a62b01bfc5
+------------------------------------------------------------------------
+r1230468 | veithm | 2012-01-12 11:08:46 +0100 (Do, 12. Jan 2012) | 3 Zeilen
+
+ETCH-135 Double Linked List Etch Wrapper
+
+Change-Id: I282ee8a50ca6b31f420bd564fcd2baaeea29434b
+------------------------------------------------------------------------
+r1230467 | veithm | 2012-01-12 11:07:54 +0100 (Do, 12. Jan 2012) | 6 Zeilen
+
+ETCH-135 CAPU Linked List
+
+Interface extension
+Add/Remove methods take iterator
+
+Change-Id: I6277ecd2f5bb9d3634ae08d37b423e893a8a08ae
+------------------------------------------------------------------------
+r1230465 | veithm | 2012-01-12 11:06:25 +0100 (Do, 12. Jan 2012) | 3 Zeilen
+
+ETCH-135 CAPU Double Linked List Implementation and Test
+
+Change-Id: I99380706ee38ab7034e89c82b56d30eb8f69e15a
+------------------------------------------------------------------------
+r1230464 | veithm | 2012-01-12 11:05:14 +0100 (Do, 12. Jan 2012) | 5 Zeilen
+
+ETCH-132 OS Abstraction for StringUtils
+
+Abstraction for sprintf, strcmp, strcpy, etc.
+
+Change-Id: Ia8688d57950102961a13671a346aca24bea9b8f1
+------------------------------------------------------------------------
+r1230463 | veithm | 2012-01-12 11:03:27 +0100 (Do, 12. Jan 2012) | 11 Zeilen
+
+ETCH-112 EtchString Implementation
+
+contains implementation of these methods
+
+substring
+copy constructor
+Assignment operator overloading
+hash function
+equals method
+
+Change-Id: Ib197140957a2a5f1e771d443dfa8137dedfdea49
+------------------------------------------------------------------------
+r1230462 | veithm | 2012-01-12 11:01:58 +0100 (Do, 12. Jan 2012) | 5 Zeilen
+
+ETCH-137 Implementation of EtchHashTable Helpers
+
+getHashCode and equals methods are added
+
+Change-Id: Ibb6765a4d60950d2a191192e116315e2c971efc8
+------------------------------------------------------------------------
+
+
+-------------
+Release 1.2.0
+-------------
+
+------------------------------------------------------------------------
+r1227067 | veithm | 2012-01-04 08:45:41 +0100 (Mi, 04. Jan 2012) | 3 Zeilen
+
+Added my public key to KEYS file
+
+Change-Id: I21a550cb235a1415566dd65289c8af62babf066a
+------------------------------------------------------------------------
+r1226712 | veithm | 2012-01-03 10:11:24 +0100 (Di, 03. Jan 2012) | 3 Zeilen
+
+ETCH-202 Added new release 1.2 information
+
+Change-Id: I8b860a9e34c67f521a930ded9f5be435dcddbbab
+------------------------------------------------------------------------
+r1226711 | veithm | 2012-01-03 10:11:02 +0100 (Di, 03. Jan 2012) | 3 Zeilen
+
+ETCH-202 Updated external dependencies on Getting Started page
+
+Change-Id: I8a012bfb34f8b8fb6ab0269bf83870b3ce1e6f55
+------------------------------------------------------------------------
+r1214813 | veithm | 2011-12-15 16:46:22 +0100 (Do, 15. Dez 2011) | 3 Zeilen
+
+ETCH-202 Fix rendering problem in documentation iframe
+
+Change-Id: I9ba3e910db0db955b322d8a661924f8c06e25fd4
+------------------------------------------------------------------------
+r1214782 | veithm | 2011-12-15 15:35:38 +0100 (Do, 15. Dez 2011) | 3 Zeilen
+
+ETCH-202 Old documentation is embedded as an iFrame
+
+Change-Id: I641c3857d0926e2d1716555771552ea2218ed2ce
+------------------------------------------------------------------------
+r1213281 | veithm | 2011-12-12 16:32:41 +0100 (Mo, 12. Dez 2011) | 1 Zeile
+
+Etch Release 1.2 tag
+------------------------------------------------------------------------
+r1213272 | veithm | 2011-12-12 16:20:13 +0100 (Mo, 12. Dez 2011) | 1 Zeile
+
+Prepare for update release tag
+------------------------------------------------------------------------
+r1213269 | veithm | 2011-12-12 16:17:50 +0100 (Mo, 12. Dez 2011) | 1 Zeile
+
+ETCH-93 Added further build instruction to chat example
+------------------------------------------------------------------------
+r1212508 | veithm | 2011-12-09 17:45:58 +0100 (Fr, 09. Dez 2011) | 1 Zeile
+
+Etch Release 1.2 tag
+------------------------------------------------------------------------
+r1212498 | veithm | 2011-12-09 17:12:14 +0100 (Fr, 09. Dez 2011) | 1 Zeile
+
+Prepare for update release tag
+------------------------------------------------------------------------
+r1212491 | veithm | 2011-12-09 17:01:06 +0100 (Fr, 09. Dez 2011) | 3 Zeilen
+
+ETCH-93 Added further information for example build instructions in Readme
+
+Change-Id: Ie7112dad4404c42434ef37646268e1d6d3c5230c
+------------------------------------------------------------------------
+r1212473 | veithm | 2011-12-09 16:18:43 +0100 (Fr, 09. Dez 2011) | 1 Zeile
+
+Etch Release 1.2 tag
+------------------------------------------------------------------------
+r1212398 | veithm | 2011-12-09 14:25:42 +0100 (Fr, 09. Dez 2011) | 3 Zeilen
+
+ETCH-203 Updated Release Notes and changeLog files
+
+Change-Id: Id73f5210a9c89b6d32f2ae0a91c8e9a7cb312005
+------------------------------------------------------------------------
+r1212360 | fitzner | 2011-12-09 13:21:54 +0100 (Fr, 09. Dez 2011) | 1 Zeile
+
+ETCH-202 Update Copyright note
+------------------------------------------------------------------------
+r1211564 | fitzner | 2011-12-07 18:46:23 +0100 (Mi, 07. Dez 2011) | 3 Zeilen
+
+ETCH-126 Add roadmap pages to the new CMS
+
+Change-Id: I1fe38546a5a12e1b7dcad1808042b60982c1cd0d
+------------------------------------------------------------------------
+r1211560 | veithm | 2011-12-07 18:42:48 +0100 (Mi, 07 Dez 2011) | 5 lines
+
+ETCH-189 CSharp examples have broken builds for 2008/2010 Visual Studio
+
+Fixed CSharp Chat Example
+
+Change-Id: I5102bd84cc99c2a2cb3f2451e608f9bf310be7fa
+------------------------------------------------------------------------
+r1211505 | veithm | 2011-12-07 17:19:30 +0100 (Mi, 07 Dez 2011) | 1 line
+
+ETCH-132 Changed Linux toolchain and capu CMake build file
+------------------------------------------------------------------------
+r1211383 | veithm | 2011-12-07 11:51:26 +0100 (Mi, 07 Dez 2011) | 3 lines
+
+ETCH-132 Changed Linux toolchain file in order to use 32 bit for the moment
+
+Change-Id: I86119d08aa70cdd7c5c81d5d8a867ae895065c9f
+------------------------------------------------------------------------
+r1211375 | veithm | 2011-12-07 11:23:52 +0100 (Mi, 07 Dez 2011) | 3 lines
+
+ETCH-188 Updated Readme files
+
+Change-Id: Ife7799376b30ee8a3478d53cf86ab650ca2be546
+------------------------------------------------------------------------
+r1211374 | veithm | 2011-12-07 11:22:06 +0100 (Mi, 07 Dez 2011) | 6 lines
+
+ETCH-93 Updated build scripts
+
+Added ant-dotnet dependency to installers
+Fixed Cmake based build of examples
+
+Change-Id: Ifad3a77c0ac9ac2f8a6e102ebe7cde67476ac7f3
+------------------------------------------------------------------------
+r1211373 | veithm | 2011-12-07 11:21:03 +0100 (Mi, 07 Dez 2011) | 11 lines
+
+ETCH-93 Update external etch dependencies to new versions
+
+Updated APR from 1.3.12 to 1.4.5
+Updated ant-dotnet from 1.0 to 1.1
+Updated javacc from 4.0 to 5.0
+Updated Velocity from 1.5 to 1.7
+Fixed c-binding velocity templates to get them working with Velocity 1.7
+Updated NSIS installer from 2.23 to 2.46
+Updated antsetup script to new external dependencies
+
+Change-Id: I8ab56c07bd0c3f550086b72b0a40d71e3cfa7d1e
+------------------------------------------------------------------------
+r1211372 | veithm | 2011-12-07 11:19:09 +0100 (Mi, 07 Dez 2011) | 5 lines
+
+ETCH-165 Compiler *.etch extension
+
+Fixed error logging
+
+Change-Id: I7c1b73bd488e67e10a05adeff4bd2a898a149951
+------------------------------------------------------------------------
+r1211369 | veithm | 2011-12-07 11:12:47 +0100 (Mi, 07 Dez 2011) | 3 lines
+
+ETCH-26 Fixed .Net language pack issue
+
+Change-Id: I7856f5cca7ab15bb205eed121655cf5bc3b43d05
+------------------------------------------------------------------------
+r1185676 | fitzner | 2011-10-18 16:11:18 +0200 (Di, 18 Okt 2011) | 3 lines
+
+ETCH-112
+
+Changed some build script issues
+------------------------------------------------------------------------
+r1185624 | veithm | 2011-10-18 14:35:59 +0200 (Di, 18 Okt 2011) | 4 lines
+
+ETCH-140 EtchThread Fix
+
+Fixed join implementation which caused Segmentation Fault on some linux
+versions
+------------------------------------------------------------------------
+r1185623 | veithm | 2011-10-18 14:34:55 +0200 (Di, 18 Okt 2011) | 3 lines
+
+ETCH-139 EtchNativeArray
+
+Small fix in Test
+------------------------------------------------------------------------
+r1174858 | fitzner | 2011-09-23 18:10:22 +0200 (Fr, 23 Sep 2011) | 5 lines
+
+ETCH-132 OS Abstraction for binding-cpp
+
+Updated existing files from Etch types to Capu types
+
+Change-Id: If0874266043ec6e7f6117572dd248f07890f2270
+------------------------------------------------------------------------
+r1174856 | fitzner | 2011-09-23 18:06:29 +0200 (Fr, 23 Sep 2011) | 6 lines
+
+ETCH-149 Etch Utility Functions
+
+Added dereference operator to SmartPointer implementation
+Added Get function to retrieve the object stored by the SmartPointer
+
+Change-Id: Ic09c53e691a37174edb2d91b27242dce1527a17b
+------------------------------------------------------------------------
+r1174621 | fitzner | 2011-09-23 11:45:56 +0200 (Fr, 23 Sep 2011) | 6 lines
+
+ETCH-112 Etch cpp-binding Runtime
+
+Avoid concurrent CAPU and etch runtime build
+Fixed path to CAPU test executable
+
+Change-Id: I2f98892313c2c9d4f79f00ea7a6025ef95e17914
+------------------------------------------------------------------------
+r1172834 | fitzner | 2011-09-19 23:19:47 +0200 (Mo, 19 Sep 2011) | 3 lines
+
+ETCH-143 Condition Variables OS Abstraction is implemented
+
+Change-Id: I4d77205556fdf266b623136893c9d2cf74bd1999
+------------------------------------------------------------------------
+r1172824 | fitzner | 2011-09-19 23:11:26 +0200 (Mo, 19 Sep 2011) | 3 lines
+
+ETCH-142 Mutex OS Abstraction is implemented
+
+Change-Id: I49014bbc7191794d7cf09cff59fbffcd3205eae6
+------------------------------------------------------------------------
+r1167361 | grandyho | 2011-09-09 23:16:34 +0200 (Fr, 09 Sep 2011) | 2 lines
+
+ETCH-171
+updated runtime to current google go version release.r60 9481
+------------------------------------------------------------------------
+r1167360 | grandyho | 2011-09-09 23:15:10 +0200 (Fr, 09 Sep 2011) | 2 lines
+
+ETCH-171
+updated compiler to current google go version release.r60 9481
+------------------------------------------------------------------------
+r1162877 | fitzner | 2011-08-29 17:47:42 +0200 (Mo, 29 Aug 2011) | 5 lines
+
+ETCH-132 OS Abstraction for binding-cpp
+
+Added Visual Leak Detector (VLD) support for tests
+
+Change-Id: Ia14912f2f281fc99fe0aa0fb4b8534e60f22a0c1
+------------------------------------------------------------------------
+r1161632 | fitzner | 2011-08-25 18:32:37 +0200 (Do, 25 Aug 2011) | 5 lines
+
+ETCH-140 Thread OS Abstraction is implemented
+
+Thanks to Goekhan Yilmaz and Martin Veith
+
+Change-Id: I5958a7f9ddec279b147f80987d103159d63b604a
+------------------------------------------------------------------------
+r1160819 | fitzner | 2011-08-23 19:23:27 +0200 (Di, 23 Aug 2011) | 6 lines
+
+ETCH-149 Etch Utility Functions
+
+Added atomic Add and Sub methods
+Added smart pointer implementation
+
+Change-Id: I24fbbe94f89f6e5dccba00c36c3abe5fd096fb65
+------------------------------------------------------------------------
+r1160276 | fitzner | 2011-08-22 16:31:24 +0200 (Mo, 22 Aug 2011) | 5 lines
+
+ETCH-112 Implementation of cpp-binding
+
+Etch String Set Method Extension
+
+Change-Id: Iab9abe0cafbbeda5ee6f57e3e9ae92c2e19cfe1d
+------------------------------------------------------------------------
+r1160264 | fitzner | 2011-08-22 15:27:56 +0200 (Mo, 22 Aug 2011) | 5 lines
+
+ETCH-132
+
+Added small change in configuration header
+
+Change-Id: I7b61d5489d8ec950d5bb147e2e95f59700603f81
+------------------------------------------------------------------------
+r1159622 | fitzner | 2011-08-19 15:11:21 +0200 (Fr, 19 Aug 2011) | 10 lines
+
+ETCH-132 OS Abstraction for binding-cpp
+
+Added CAPU (Collections and Plattform Abstraction Utils) CMake based build system
+Added CAPU to binding-cpp runtime build
+Added Mutex Abstraction (see ETCH-142)
+
+Many thanks to Martin Veith, Sven von Beuningen and Timo Lotterbach for the CMake based
+build system and the basic os abtraction.
+
+Change-Id: I87b4f9a95df5a018754712fe4091ea4c39e5b683
+------------------------------------------------------------------------
+r1153862 | fitzner | 2011-08-04 14:28:14 +0200 (Do, 04 Aug 2011) | 3 lines
+
+ETCH-164 Added cMake path configuration to setup script
+
+This patch is from Martin Veith (see ETCH-164)
+------------------------------------------------------------------------
+r1153860 | fitzner | 2011-08-04 14:15:53 +0200 (Do, 04 Aug 2011) | 6 lines
+
+ETCH-139 Small bug fixes
+
+Updated EtchTypes
+Updated EtchNativeArray method signature
+
+This patch comes from Martin Veith (see Issue ETCH-139)
+------------------------------------------------------------------------
+r1153858 | fitzner | 2011-08-04 14:09:32 +0200 (Do, 04 Aug 2011) | 5 lines
+
+ETCH-139, ETCH-154 NativeArray, native datatypes
+
+Implementation of EtchNativeArray and tests
+
+This patch comes from Martin Veith (see Issue ETCH-133)
+------------------------------------------------------------------------
+r1152287 | fitzner | 2011-07-29 18:01:37 +0200 (Fr, 29 Jul 2011) | 1 line
+
+ETCH-162 Added frequently used docbook5 elements to docbook-intro
+------------------------------------------------------------------------
+r1152285 | fitzner | 2011-07-29 17:52:14 +0200 (Fr, 29 Jul 2011) | 1 line
+
+ETCH-115 Upgraded docbook xml-files from docbook 4.3 to docbook 5
+------------------------------------------------------------------------
+r1151162 | fitzner | 2011-07-26 18:43:31 +0200 (Di, 26 Jul 2011) | 3 lines
+
+ETCH-152 build server integration
+
+Changed external download script
+------------------------------------------------------------------------
+r1151071 | fitzner | 2011-07-26 14:18:13 +0200 (Di, 26 Jul 2011) | 3 lines
+
+ETCH-152 build server integration
+
+Fixed csharp build for Linux if Mono is not available
+------------------------------------------------------------------------
+r1150449 | fitzner | 2011-07-24 20:09:55 +0200 (So, 24 Jul 2011) | 3 lines
+
+ETCH-152 build server integration
+
+Removed ancall for stable and experimental builds
+------------------------------------------------------------------------
+r1150438 | fitzner | 2011-07-24 19:10:26 +0200 (So, 24 Jul 2011) | 3 lines
+
+ETCH-152 build server integration
+
+Changed build script of tests component; build of all bindings is not necessary anymore
+------------------------------------------------------------------------
+r1150226 | fitzner | 2011-07-23 23:44:45 +0200 (Sa, 23 Jul 2011) | 3 lines
+
+ETCH-152 build server integration
+
+Add condition for test execution os famaliy windows and unix
+------------------------------------------------------------------------
+r1150217 | fitzner | 2011-07-23 22:40:39 +0200 (Sa, 23 Jul 2011) | 3 lines
+
+ETCH-152 build server integration
+
+Add settings to enable memory leak detection for binding-cpp on windows builds
+------------------------------------------------------------------------
+r1149661 | fitzner | 2011-07-22 19:21:44 +0200 (Fr, 22 Jul 2011) | 3 lines
+
+ETCH-113 binding-cpp compiler
+
+Add some needed files for building binding-cpp
+------------------------------------------------------------------------
+r1149650 | fitzner | 2011-07-22 18:54:52 +0200 (Fr, 22 Jul 2011) | 3 lines
+
+ETCH-152 build system for build server integration
+
+Add option for experimental builds, fix cpp compiler naming, add new setting property file
+------------------------------------------------------------------------
+r1149318 | fitzner | 2011-07-21 21:06:53 +0200 (Do, 21 Jul 2011) | 3 lines
+
+ETCH-158 build
+
+Add ignore files, and info block to ant build
+------------------------------------------------------------------------
+r1149291 | fitzner | 2011-07-21 20:10:44 +0200 (Do, 21 Jul 2011) | 3 lines
+
+ETCH-158 build
+
+Add ignore files
+------------------------------------------------------------------------
+r1143773 | fitzner | 2011-07-07 13:42:09 +0200 (Do, 07 Jul 2011) | 2 lines
+
+[ETCH-115]
+Add template for docbook documentation introduction
+------------------------------------------------------------------------
+r1143759 | fitzner | 2011-07-07 13:06:28 +0200 (Do, 07 Jul 2011) | 2 lines
+
+[ETCH-115]
+Add support for windows docbook build
+------------------------------------------------------------------------
+r1136323 | fitzner | 2011-06-16 10:34:21 +0200 (Do, 16 Jun 2011) | 2 lines
+
+[ETCH-161]
+Naming conflicts in Etch binding-c runtime message module
+------------------------------------------------------------------------
+r1127088 | grandyho | 2011-05-24 16:33:03 +0200 (Di, 24 Mai 2011) | 2 lines
+
+ETCH-93
+updated gtest 1.6
+------------------------------------------------------------------------
+r1103543 | fitzner | 2011-05-15 23:07:41 +0200 (So, 15 Mai 2011) | 9 lines
+
+[ETCH-157]
+binding-csharp: add udp transport support
+
+Make udp and tcp protocols seamlessly interchangable in etch
+The differences between the underlying protocols remain.
+
+This patch comes from
+Armin Mueller <mueller@itestra.com>
+Aleksandar Kanchev <kanchev@itestra.com>
+------------------------------------------------------------------------
+r1103514 | fitzner | 2011-05-15 21:41:31 +0200 (So, 15 Mai 2011) | 9 lines
+
+[ETCH-157]
+binding-java: add udp transport support
+
+Make udp and tcp protocols seamlessly interchangable in etch.
+The differences between the underlying protocols remain.
+
+This patch comes from
+Armin Mueller <mueller@itestra.com>
+Aleksandar Kanchev <kanchev@itestra.com>
+------------------------------------------------------------------------
+r1103377 | fitzner | 2011-05-15 15:54:29 +0200 (So, 15 Mai 2011) | 2 lines
+
+[ETCH-160]
+Changed .Net Culture for Tests, fix thread handling for TodoManager, add livecycle to TestKeepAlive tests
+------------------------------------------------------------------------
+r1103036 | grandyho | 2011-05-14 12:57:07 +0200 (Sa, 14 Mai 2011) | 1 line
+
+ETCH-159 update build to work with latest Apache Ant 1.8.2
+------------------------------------------------------------------------
+r1097374 | fitzner | 2011-04-28 11:04:23 +0200 (Do, 28 Apr 2011) | 8 lines
+
+[ETCH-157]
+
+binding-csharp: bump dependencies to .NET 4.0 and NUnit 2.5.9
+
+The C# UDP implementation uses features only available in .NET 4.0.
+Dependencies are changed to current .NET and NUnit versions.
+
+This patch was signed off by Armin Mueller (mueller@itestra.com)
+------------------------------------------------------------------------
+r1097344 | grandyho | 2011-04-28 09:56:44 +0200 (Do, 28 Apr 2011) | 8 lines
+
+ETCH-158
+
+Patch provided by Armin Mueller (mueller@itestra.com)
+
+build: add "skip.examples" property
+Can be used to skip building examples, e.g.
+ant -Dskip.examples=true -Dskip.tests=true
+skips building examples and tests
+------------------------------------------------------------------------
+r1094860 | grandyho | 2011-04-19 07:49:22 +0200 (Di, 19 Apr 2011) | 2 lines
+
+ETCH-156
+now joining rcvlxr thread in case of shutdown from other side and simulaneous stop_wait call
+------------------------------------------------------------------------
+r1094573 | fitzner | 2011-04-18 15:51:12 +0200 (Mo, 18 Apr 2011) | 2 lines
+
+[ETCH-109]
+c-binding: Implementation of Mixins Major parts of this patch was provided by Armin Mueller, Holger Grandy
+------------------------------------------------------------------------
+r1086630 | fitzner | 2011-03-29 17:38:00 +0200 (Di, 29 M�r 2011) | 2 lines
+
+[ETCH-153]
+Add binding-cpp to nightly builds
+------------------------------------------------------------------------
+r1074706 | grandyho | 2011-02-25 22:26:00 +0100 (Fr, 25 Feb 2011) | 1 line
+
+ETCH-91 small fixes in helloworld example
+------------------------------------------------------------------------
+r1074705 | grandyho | 2011-02-25 22:25:24 +0100 (Fr, 25 Feb 2011) | 1 line
+
+ETCH-155 added apr_socket_shutdown to socket_closex
+------------------------------------------------------------------------
+r1074704 | grandyho | 2011-02-25 22:24:31 +0100 (Fr, 25 Feb 2011) | 1 line
+
+ETCH-109 fixes for tests using mixins, delay for reconnect in tcp max conn test
+------------------------------------------------------------------------
+r1065979 | grandyho | 2011-02-01 11:13:41 +0100 (Di, 01 Feb 2011) | 1 line
+
+ETCH-150 etch primitive type tests
+------------------------------------------------------------------------
+r1065978 | grandyho | 2011-02-01 11:11:21 +0100 (Di, 01 Feb 2011) | 1 line
+
+ETCH-150 added primitive type implementations
+------------------------------------------------------------------------
+r1065977 | grandyho | 2011-02-01 11:08:21 +0100 (Di, 01 Feb 2011) | 2 lines
+
+ETCH-150
+header files for primitive types
+------------------------------------------------------------------------
+r1065971 | grandyho | 2011-02-01 11:05:14 +0100 (Di, 01 Feb 2011) | 1 line
+
+ETCH-150 gitignores
+------------------------------------------------------------------------
+r1065558 | grandyho | 2011-01-31 12:10:50 +0100 (Mo, 31 Jan 2011) | 2 lines
+
+ETCH-131
+typo fix in readme for documentation
+------------------------------------------------------------------------
+r1063447 | grandyho | 2011-01-25 21:39:58 +0100 (Di, 25 Jan 2011) | 2 lines
+
+ETCH-149
+changed indent style to 4 spaces for tabs
+------------------------------------------------------------------------
+r1062874 | grandyho | 2011-01-24 17:55:20 +0100 (Mo, 24 Jan 2011) | 3 lines
+
+ETCH-149
+initial changes for Linux
+
+------------------------------------------------------------------------
+r1061972 | grandyho | 2011-01-21 20:13:40 +0100 (Fr, 21 Jan 2011) | 2 lines
+
+[ETCH-131] started work on reference documentation
+
+------------------------------------------------------------------------
+r1051033 | grandyho | 2010-12-20 11:03:03 +0100 (Mo, 20 Dez 2010) | 2 lines
+
+Updated Versions to 1.2
+fixed generated C binding header comments (generation timestamp and version)
+------------------------------------------------------------------------
+r1044449 | fitzner | 2010-12-10 18:21:51 +0100 (Fr, 10 Dez 2010) | 3 lines
+
+[ETCH-111] Implementation of cpp-binding for etch 
+
+Initial project setup for binding-cpp, package contains runtime project CMake and projects for main and test runtime parts.
+------------------------------------------------------------------------
+r1043970 | fitzner | 2010-12-09 15:10:18 +0100 (Do, 09 Dez 2010) | 2 lines
+
+[ETCH-115] Etch Documentation Template for PDF and Html
+- Add template and basic documentation infrastructure
+------------------------------------------------------------------------
+r1040129 | grandyho | 2010-11-29 15:44:28 +0100 (Mo, 29 Nov 2010) | 1 line
+
+small addition / correction in BUILD.txt
+------------------------------------------------------------------------
+r1040122 | grandyho | 2010-11-29 15:29:21 +0100 (Mo, 29 Nov 2010) | 2 lines
+
+ETCH-120
+alpha version of a Google Go Binding
+------------------------------------------------------------------------
+r1040060 | fitzner | 2010-11-29 11:47:36 +0100 (Mo, 29 Nov 2010) | 2 lines
+
+[ETCH-119]
+Bugfix TCP backlog parameter
+------------------------------------------------------------------------
+r1035341 | fitzner | 2010-11-15 17:20:20 +0100 (Mo, 15 Nov 2010) | 1 line
+
+[ETCH-118] Add exception handling code to hello world c-binding example
+------------------------------------------------------------------------
+r1035334 | fitzner | 2010-11-15 17:09:06 +0100 (Mo, 15 Nov 2010) | 1 line
+
+[ETCH-117] Race condition while connection goes down
+------------------------------------------------------------------------
+r1035328 | fitzner | 2010-11-15 17:03:36 +0100 (Mo, 15 Nov 2010) | 1 line
+
+[ETCH-116] Change \scripts\antsetup.bat so external ENV variables are also handled
+------------------------------------------------------------------------
+r1032943 | fitzner | 2010-11-09 12:53:52 +0100 (Di, 09 Nov 2010) | 1 line
+
+[ETCH-114] Bug fix plain_mailbox_manager; do cleanup all registered mailboxes if connection goes down
+------------------------------------------------------------------------
+r1032912 | fitzner | 2010-11-09 11:37:36 +0100 (Di, 09 Nov 2010) | 1 line
+
+[ETCH-110] add some binding-c unit mutex tests
+------------------------------------------------------------------------
+r1031550 | grandyho | 2010-11-05 14:10:50 +0100 (Fr, 05 Nov 2010) | 1 line
+
+ETCH-109: Fixes for mixins in C Binding. At the moment only mixed in data structures work. Function calls of mixed in services are not yet possible.
+------------------------------------------------------------------------
+r1027966 | grandyho | 2010-10-27 15:57:37 +0200 (Mi, 27 Okt 2010) | 2 lines
+
+ETCH-106
+fix for C Binding: double-free bug for structs containing structs containing strings, clone now sets cloned object to "static_content" -> no double free on clone / original destruction
+------------------------------------------------------------------------
+r1027844 | grandyho | 2010-10-27 09:30:18 +0200 (Mi, 27 Okt 2010) | 2 lines
+
+ETCH-83
+Helloworld Example build script now uses -m32 on Linux
+------------------------------------------------------------------------
+r1027829 | grandyho | 2010-10-27 08:40:15 +0200 (Mi, 27 Okt 2010) | 2 lines
+
+ETCH-83
+Download Script for linux depends for Hudson
+------------------------------------------------------------------------
+r1027525 | grandyho | 2010-10-26 14:54:23 +0200 (Di, 26 Okt 2010) | 1 line
+
+
+------------------------------------------------------------------------
+r1026300 | grandyho | 2010-10-22 13:21:01 +0200 (Fr, 22 Okt 2010) | 3 lines
+
+ETCH-108
+when stopping and destroying the runtime on client side in the same moment as the server closes the socket, a race condition might occur.
+Fix: join client receive thread even in case of errors
+------------------------------------------------------------------------
+r1024127 | grandyho | 2010-10-19 08:15:28 +0200 (Di, 19 Okt 2010) | 2 lines
+
+ETCH-107
+Etch C binding Compiler: different genereted port numbers 
+------------------------------------------------------------------------
+
+
+-------------
+Release 1.1.0
+-------------
+
+------------------------------------------------------------------------
+r1004126 | grandyho | 2010-10-04 08:52:48 +0200 (Mo, 04 Okt 2010) | 2 lines
+
+ETCH-86
+copyright ASF 2010
+------------------------------------------------------------------------
+r1000740 | grandyho | 2010-09-24 08:55:17 +0200 (Fr, 24 Sep 2010) | 2 lines
+
+ETCH-74
+added apache license header
+------------------------------------------------------------------------
+r1000739 | grandyho | 2010-09-24 08:54:14 +0200 (Fr, 24 Sep 2010) | 2 lines
+
+ETCH-74
+added apache license header
+------------------------------------------------------------------------
+r1000736 | grandyho | 2010-09-24 08:48:37 +0200 (Fr, 24 Sep 2010) | 2 lines
+
+ETCH-91
+unified behavior of all helloworld implementations
+------------------------------------------------------------------------
+r1000489 | grandyho | 2010-09-23 16:58:23 +0200 (Do, 23 Sep 2010) | 4 lines
+
+ETCH-100
+ETCH-85
+ETCH-84
+READMEs updated to match new trunk structure
+------------------------------------------------------------------------
+r1000464 | grandyho | 2010-09-23 15:36:01 +0200 (Do, 23 Sep 2010) | 1 line
+
+line endings changed to unix
+------------------------------------------------------------------------
+r1000454 | grandyho | 2010-09-23 15:16:02 +0200 (Do, 23 Sep 2010) | 2 lines
+
+ETCH-104
+added third party license and notice files to dist folder
+------------------------------------------------------------------------
+r1000452 | fitzner | 2010-09-23 15:11:00 +0200 (Do, 23 Sep 2010) | 1 line
+
+[ETCH-104] Create NOTICE_THIRD_PARTY.txt and LICENSE_THIRD_PARTY.txt
+------------------------------------------------------------------------
+r1000432 | grandyho | 2010-09-23 14:42:15 +0200 (Do, 23 Sep 2010) | 3 lines
+
+ETCH-88
+ETCH-83
+small path name fix for build server
+------------------------------------------------------------------------
+r1000427 | grandyho | 2010-09-23 14:28:15 +0200 (Do, 23 Sep 2010) | 3 lines
+
+ETCH-101 
+Helloworld Example integrated into trunk build (incl. code generation and compile for c)
+when on release dist, only code is generated, no cmake call is made (don't want cmake-ant dependency in release package)
+------------------------------------------------------------------------
+r1000412 | grandyho | 2010-09-23 13:24:56 +0200 (Do, 23 Sep 2010) | 3 lines
+
+ETCH-88
+ETCH-83
+fix in build for tests (missing binding-java)
+------------------------------------------------------------------------
+r1000379 | grandyho | 2010-09-23 11:30:50 +0200 (Do, 23 Sep 2010) | 7 lines
+
+ETCH-88
+ETCH-83
+added check if download is already there
+
+
+
+
+------------------------------------------------------------------------
+r1000363 | grandyho | 2010-09-23 11:09:00 +0200 (Do, 23 Sep 2010) | 7 lines
+
+ETCH-88
+ETCH-83
+added build-support/download_depends.xml to download external files and unzip them
+
+
+
+
+------------------------------------------------------------------------
+r1000350 | grandyho | 2010-09-23 10:34:24 +0200 (Do, 23 Sep 2010) | 3 lines
+
+[ETCH-88] -m32 added for unix build. now in CMakeLists.txt
+
+
+------------------------------------------------------------------------
+r1000344 | grandyho | 2010-09-23 09:35:39 +0200 (Do, 23 Sep 2010) | 3 lines
+
+[ETCH-88] -m32 added for unix build. needed on apache's hudson
+
+
+------------------------------------------------------------------------
+r1000340 | fitzner | 2010-09-23 09:18:43 +0200 (Do, 23 Sep 2010) | 1 line
+
+[ETCH-92] Integrate C binding to NSIS installer and packaging, changed installer binding-xx installer layout, add os and platform labels
+------------------------------------------------------------------------
+r1000338 | grandyho | 2010-09-23 09:07:10 +0200 (Do, 23 Sep 2010) | 2 lines
+
+[ETCH-88] small extension for use on build server 
+
+------------------------------------------------------------------------
+r1000134 | grandyho | 2010-09-22 20:43:34 +0200 (Mi, 22 Sep 2010) | 2 lines
+
+small fix for build on linux
+
+------------------------------------------------------------------------
+r1000031 | grandyho | 2010-09-22 17:14:40 +0200 (Mi, 22 Sep 2010) | 1 line
+
+add ctarget to svn ignore
+------------------------------------------------------------------------
+r1000027 | grandyho | 2010-09-22 17:10:44 +0200 (Mi, 22 Sep 2010) | 1 line
+
+added cmake based build for helloworld example in c binding
+------------------------------------------------------------------------
+r1000019 | grandyho | 2010-09-22 16:58:28 +0200 (Mi, 22 Sep 2010) | 1 line
+
+fix in validator for longer service names
+------------------------------------------------------------------------
+r1000017 | grandyho | 2010-09-22 16:58:13 +0200 (Mi, 22 Sep 2010) | 1 line
+
+moved extern "C" after includes
+------------------------------------------------------------------------
+r999973 | grandyho | 2010-09-22 16:24:13 +0200 (Mi, 22 Sep 2010) | 1 line
+
+small typo fixes in apr-install.sh for linux
+------------------------------------------------------------------------
+r999968 | fitzner | 2010-09-22 16:20:33 +0200 (Mi, 22 Sep 2010) | 1 line
+
+[ETCH-65] integrate binding-c into ANT build
+------------------------------------------------------------------------
+r999964 | grandyho | 2010-09-22 16:16:17 +0200 (Mi, 22 Sep 2010) | 1 line
+
+extended all etch compilers to generate configuration files for wireshark
+------------------------------------------------------------------------
+r999845 | grandyho | 2010-09-22 11:47:20 +0200 (Mi, 22 Sep 2010) | 1 line
+
+fix in message.java: added missing util methods for c compiler templates (remote_server_h.vm)
+------------------------------------------------------------------------
+r999456 | fitzner | 2010-09-21 17:12:40 +0200 (Di, 21 Sep 2010) | 1 line
+
+[ETCH-81] Setup CMake based build environment for C binding for windows and linux
+------------------------------------------------------------------------
+r998923 | grandyho | 2010-09-20 15:39:19 +0200 (Mo, 20 Sep 2010) | 1 line
+
+bin/obj/target folders in svn_ignore
+------------------------------------------------------------------------
+r998902 | grandyho | 2010-09-20 14:10:40 +0200 (Mo, 20 Sep 2010) | 1 line
+
+added code signing key for holger grandy
+------------------------------------------------------------------------
+r998836 | fitzner | 2010-09-20 11:11:37 +0200 (Mo, 20 Sep 2010) | 1 line
+
+[ETCH-97] Add public KEY for fitzner
+------------------------------------------------------------------------
+r998801 | grandyho | 2010-09-20 08:49:34 +0200 (Mo, 20 Sep 2010) | 2 lines
+
+added helloworld example to eclipse sources
+
+------------------------------------------------------------------------
+r998142 | grandyho | 2010-09-17 16:00:30 +0200 (Fr, 17 Sep 2010) | 2 lines
+
+VTune in svn:ignore
+test/c (empty) added
+------------------------------------------------------------------------
+r998135 | grandyho | 2010-09-17 15:53:26 +0200 (Fr, 17 Sep 2010) | 1 line
+
+overhauled the helloworld example. current implementation works for Java and C#. C sources get generated too, but build is not yet integrated. (the latter will be done when the c binding itself will be built using cmake).
+------------------------------------------------------------------------
+r998118 | grandyho | 2010-09-17 15:24:16 +0200 (Fr, 17 Sep 2010) | 15 lines
+
+build now uses ETCH_EXTERNAL_DEPENDS environment variable to look for dependencies. 
+Use "scripts/antsetup.bat" on Win32 to set up your command line before calling "ant Debug"
+On Linux, just do export ETCH_EXTERNAL_DEPENDS=/path/to/some/folder
+
+In ETCH_EXTERNAL_DEPENDS, you should have the following:
+
+apache-ant/1.7.0/
+apache-ant-dotnet/1.0/
+javacc/4.0
+junit/4.3.1
+nsis/2.23
+nunit/2.4.7
+velocity/1.5
+
+this resolves https://issues.apache.org/jira/browse/ETCH-90
+------------------------------------------------------------------------
+r997620 | grandyho | 2010-09-16 09:09:35 +0200 (Do, 16 Sep 2010) | 1 line
+
+deleted old helloworld example contents
+------------------------------------------------------------------------
+r997616 | grandyho | 2010-09-16 09:03:30 +0200 (Do, 16 Sep 2010) | 1 line
+
+added VTune to svn:ignore
+------------------------------------------------------------------------
+r997607 | grandyho | 2010-09-16 08:50:34 +0200 (Do, 16 Sep 2010) | 1 line
+
+added VTune to svn:ignore
+------------------------------------------------------------------------
+r997275 | grandyho | 2010-09-15 13:02:56 +0200 (Mi, 15 Sep 2010) | 1 line
+
+added target folder to svn:ignore
+------------------------------------------------------------------------
+r997242 | grandyho | 2010-09-15 11:49:49 +0200 (Mi, 15 Sep 2010) | 1 line
+
+fix for https://issues.apache.org/jira/browse/ETCH-80
+------------------------------------------------------------------------
+r997238 | fitzner | 2010-09-15 11:22:10 +0200 (Mi, 15 Sep 2010) | 1 line
+
+[ETCH-82] Merge branch etch-c into trunk
+------------------------------------------------------------------------
+r996956 | fitzner | 2010-09-14 17:36:17 +0200 (Di, 14 Sep 2010) | 1 line
+
+[ETCH-82] remove old binding-c implementation for doing merge from branches/etch-c
+------------------------------------------------------------------------
+r783810 | sccomer | 2009-06-11 17:10:34 +0200 (Do, 11 Jun 2009) | 1 line
+
+update change log and release notes.
+----------------------------------------------------------------------------
+r783606 | manojganesan | 2009-06-10 21:16:08 CDT
+
+Fix for ETCH-76: Build problems if Etch source is downloaded to a path with spaces
+
+Fix for ETCH-77: Incompatibility in the READMEs for the bundled examples
+----------------------------------------------------------------------------
+r779755 | sccomer | 2009-05-28 15:07:25 CDT
+
+bring up to date.
+----------------------------------------------------------------------------
+r779752 | sccomer | 2009-05-28 14:59:02 CDT
+
+fix for ETCH-71: repair license header in c binding
+----------------------------------------------------------------------------
+r779693 | sccomer | 2009-05-28 12:42:09 CDT
+
+fix for ETCH-71: repair license header in c binding.
+----------------------------------------------------------------------------
+r779588 | sccomer | 2009-05-28 08:02:14 CDT
+
+fix for ETCH-74: repair license header in scripts
+----------------------------------------------------------------------------
+r779291 | sccomer | 2009-05-27 14:59:35 CDT
+
+fix for ETCH-73: repair license header in tests
+----------------------------------------------------------------------------
+r779260 | sccomer | 2009-05-27 12:56:47 CDT
+
+fix for ETCH-72: repair license header in interop tester
+----------------------------------------------------------------------------
+r778422 | sccomer | 2009-05-25 08:52:00 CDT
+
+cleaning up build.
+
+fix maven installation script.
+
+ETCH-70: include incubating in the artifact version.
+----------------------------------------------------------------------------
+r777138 | sccomer | 2009-05-21 09:44:35 CDT
+
+cleanup svn properties.
+----------------------------------------------------------------------------
+r776747 | sccomer | 2009-05-20 10:53:47 CDT
+
+correcting svn properties and header comment.
+----------------------------------------------------------------------------
+r776736 | sccomer | 2009-05-20 10:34:51 CDT
+
+added detail noting c-binding contribution.
+----------------------------------------------------------------------------
+r776733 | sccomer | 2009-05-20 10:30:30 CDT
+
+updated release notes, change log, and top readme.
+----------------------------------------------------------------------------
+r772416 | sccomer | 2009-05-06 15:31:38 CDT
+
+fix for ETCH-69: Compiler throws URISyntaxException if there are spaces in the classpath
+----------------------------------------------------------------------------
+r771866 | sccomer | 2009-05-05 11:03:03 CDT
+
+added scott's keys.
+----------------------------------------------------------------------------
+r768314 | sccomer | 2009-04-24 09:02:23 CDT
+
+fix linebreaks and remove bogus license header.
+
+fix README.txt and augment.
+----------------------------------------------------------------------------
+r768008 | sccomer | 2009-04-23 13:33:53 CDT
+
+updated change log and release notes.
+----------------------------------------------------------------------------
+r767991 | sccomer | 2009-04-23 12:36:27 CDT
+
+clean up some more copyright notices.
+
+disabled the eclipse compile of the broken Compiler.java for python.
+----------------------------------------------------------------------------
+r767594 | jdecocq | 2009-04-22 12:25:43 CDT
+
+(contributed the c-binding -scott)
+----------------------------------------------------------------------------
+r752724 | dixson | 2009-03-11 19:28:42 CDT
+
+created top level README for python binding
+----------------------------------------------------------------------------
+r752723 | dixson | 2009-03-11 19:28:36 CDT
+
+update license headers
+----------------------------------------------------------------------------
+r752722 | dixson | 2009-03-11 19:27:30 CDT
+
+update python binding, correct package names for compiler
+----------------------------------------------------------------------------
+r752721 | dixson | 2009-03-11 19:27:18 CDT
+
+updating python binding compiler
+----------------------------------------------------------------------------
+r752720 | dixson | 2009-03-11 19:27:07 CDT
+
+update python binding compiler
+----------------------------------------------------------------------------
+r752719 | dixson | 2009-03-11 19:26:53 CDT
+
+update meta-data template to be version agnostic
+----------------------------------------------------------------------------
+r752718 | dixson | 2009-03-11 19:26:48 CDT
+
+unit test package refactor
+----------------------------------------------------------------------------
+r752717 | dixson | 2009-03-11 19:25:55 CDT
+
+first cut at build integration
+----------------------------------------------------------------------------
+r752716 | dixson | 2009-03-11 19:25:27 CDT
+
+update package info
+----------------------------------------------------------------------------
+r752715 | dixson | 2009-03-11 19:25:22 CDT
+
+clear execute bit
+----------------------------------------------------------------------------
+r752714 | dixson | 2009-03-11 19:25:18 CDT
+
+update README to reference requirement for python 2.6
+----------------------------------------------------------------------------
+r752713 | dixson | 2009-03-11 19:25:14 CDT
+
+update execute bit
+----------------------------------------------------------------------------
+r752712 | dixson | 2009-03-11 19:24:55 CDT
+
+clear execute bit
+----------------------------------------------------------------------------
+r752710 | dixson | 2009-03-11 19:24:41 CDT
+
+clear execute bit
+----------------------------------------------------------------------------
+r752709 | dixson | 2009-03-11 19:24:35 CDT
+
+clear execute bit
+----------------------------------------------------------------------------
+r752708 | dixson | 2009-03-11 19:24:21 CDT
+
+clear execute bit
+----------------------------------------------------------------------------
+r752707 | dixson | 2009-03-11 19:24:11 CDT
+
+clear execute bit
+----------------------------------------------------------------------------
+r752706 | dixson | 2009-03-11 19:24:05 CDT
+
+- synchronize binding.msg with java
+- update import stanzas with 'from __future__ import absolute_import'
+----------------------------------------------------------------------------
+r752705 | dixson | 2009-03-11 19:23:44 CDT
+
+remove .gitignore files, use repo-global
+----------------------------------------------------------------------------
+r752704 | dixson | 2009-03-11 19:23:39 CDT
+
+change to allow 'javacc.home', 'velocity.lib' and 'junit.lib' to be
+overriden on the ant command-line
+----------------------------------------------------------------------------
+r752703 | dixson | 2009-03-11 19:23:35 CDT
+
+adding .gitignore files, by default ignoring "target/" directories
+----------------------------------------------------------------------------
+r752702 | dixson | 2009-03-11 19:23:28 CDT
+
+python-binding commit
+----------------------------------------------------------------------------
+r752214 | dixson | 2009-03-10 13:52:04 CDT
+
+Add DISCLAIMER.txt
+----------------------------------------------------------------------------
+r749661 | sccomer | 2009-03-03 11:09:51 CST
+
+configuring c directory tree
+----------------------------------------------------------------------------
+r748262 | sccomer | 2009-02-26 12:28:10 CST
+
+fix for ETCH-42: create a csharp example test
+----------------------------------------------------------------------------
+r748254 | sccomer | 2009-02-26 12:14:11 CST
+
+update java interoptest example to also run during normal etch build.
+----------------------------------------------------------------------------
+r748251 | sccomer | 2009-02-26 12:09:47 CST
+
+more fiddlings with the listener newServer api. the api is now more consistent
+and everything that might vary and is needed to finish the construction of the
+transport comes in the method call.
+----------------------------------------------------------------------------
+r743982 | sccomer | 2009-02-12 22:41:18 CST
+
+tone down some of the debugging output, account for listener api change.
+----------------------------------------------------------------------------
+r743752 | dixson | 2009-02-12 08:09:19 CST
+
+correct package names in Chat Client project
+----------------------------------------------------------------------------
+r743420 | dixson | 2009-02-11 11:43:53 CST
+
+fixing binary tag broken by 1.0.2 merge
+----------------------------------------------------------------------------
+r743400 | dixson | 2009-02-11 10:57:38 CST
+
+more 1.0.2 merge .. update README to reflect correct install paths on
+windows
+add NOTICE.txt and RELEASE_NOTES.txt to binary distribution packages
+----------------------------------------------------------------------------
+r743399 | dixson | 2009-02-11 10:57:36 CST
+
+update license info in default versions of generated source
+----------------------------------------------------------------------------
+r743398 | dixson | 2009-02-11 10:57:28 CST
+
+ETCH-49 - merge changes from 1.0.2 into trunk (specifcally license
+updates)
+----------------------------------------------------------------------------
+r743394 | dixson | 2009-02-11 10:56:29 CST
+
+update clean target for example/build.xml to clean submodules too
+----------------------------------------------------------------------------
+r743393 | dixson | 2009-02-11 10:56:26 CST
+
+remove test reference from clover setup for plugins/ant
+----------------------------------------------------------------------------
+r743392 | dixson | 2009-02-11 10:56:23 CST
+
+remove defunct unit tests from plugins/ant/src/test
+----------------------------------------------------------------------------
+r743391 | dixson | 2009-02-11 10:56:14 CST
+
+update copyright strings in generated AssemblyInfo.cs in C# binding
+----------------------------------------------------------------------------
+r743390 | dixson | 2009-02-11 10:56:11 CST
+
+AssemblyFileVersion in C# AssemblyInfo needs to be in Mj.Mn.P.B format
+----------------------------------------------------------------------------
+r743388 | dixson | 2009-02-11 10:56:07 CST
+
+update 'scripts/Bamboo.bat' to operate correctly from 'scripts/' folder
+----------------------------------------------------------------------------
+r743387 | dixson | 2009-02-11 10:56:05 CST
+
+rename 'ReleaseNotes.txt' to canonical 'RELEASE_NOTES.txt'
+----------------------------------------------------------------------------
+r743386 | dixson | 2009-02-11 10:56:03 CST
+
+Revert "change 'ReleaseNotes.txt' to canonical 'RELEASE_NOTES.txt'"
+
+This reverts commit 2c0a6ba0be08f462eb798fa861c77be551da93d3.
+----------------------------------------------------------------------------
+r743385 | dixson | 2009-02-11 10:56:00 CST
+
+move 'Bamboo.txt' and 'antsetup.txt' into scripts folder
+----------------------------------------------------------------------------
+r743384 | dixson | 2009-02-11 10:55:55 CST
+
+change 'ReleaseNotes.txt' to canonical 'RELEASE_NOTES.txt'
+----------------------------------------------------------------------------
+r743358 | sccomer | 2009-02-11 09:18:15 CST
+
+fix for ETCH-46: put csharp header comments in order per apache standard
+----------------------------------------------------------------------------
+r743147 | sccomer | 2009-02-10 16:53:01 CST
+
+fix for ETCH-45: put java header comments in order per apache standard
+
+some csharp headers adjusted, but they are not yet the proper text.
+----------------------------------------------------------------------------
+r743011 | sccomer | 2009-02-10 10:40:34 CST
+
+fix for ETCH-59: Listener stack is build 1/2 upside down and strange inhibiting
+name service and other transport filters
+----------------------------------------------------------------------------
+r741247 | dixson | 2009-02-05 13:03:45 CST
+
+ETCH-49 - merge changes from 1.0.2. into trunk
+----------------------------------------------------------------------------
+r741245 | dixson | 2009-02-05 12:59:14 CST
+
+fix syntax error in plugins/ant/build.xml
+----------------------------------------------------------------------------
+r741244 | dixson | 2009-02-05 12:58:22 CST
+
+ETCH-49 - merge changes from 1.0.2 branch to trunk
+ETCH-50 - update version strings to include '-incubating'
+----------------------------------------------------------------------------
+r741243 | dixson | 2009-02-05 12:57:18 CST
+
+ETCH-51 -- make examples more tolerant of verison changes
+----------------------------------------------------------------------------
+r740938 | sccomer | 2009-02-04 17:33:49 CST
+
+used eclipse cleanup to remove superfluous items such as unused private members,
+unneeded parenthesis, this. qualification, casts, and unused local variables.
+----------------------------------------------------------------------------
+r740904 | sccomer | 2009-02-04 15:39:34 CST
+
+fix for ETCH-57: Sometimes closing a TlsConnection normally will result in an
+IOException with Socket is closed.
+----------------------------------------------------------------------------
+r740898 | sccomer | 2009-02-04 15:30:37 CST
+
+fix for ETCH-39: create directory structure for interoperability tester
+----------------------------------------------------------------------------
+r740897 | sccomer | 2009-02-04 15:29:06 CST
+
+fix for ETCH-39: create directory structure for interoperability tester
+----------------------------------------------------------------------------
+r740894 | sccomer | 2009-02-04 15:17:25 CST
+
+fix for ETCH-56: UnwantedMessage.ToString method attempts to format using the
+java style formatting instead of csharp style
+----------------------------------------------------------------------------
+r740892 | sccomer | 2009-02-04 15:16:33 CST
+
+refactored java binding runtime package names from etch to org.apache.etch.
+
+in this case, fix the transport stack filter names.
+----------------------------------------------------------------------------
+r740890 | sccomer | 2009-02-04 15:14:40 CST
+
+refactored csharp binding runtime namespace from Etch to
+Org.Apache.Etch.Bindings.Csharp.
+
+in this case, fix the transport stack filter names.
+----------------------------------------------------------------------------
+r740792 | sccomer | 2009-02-04 11:04:20 CST
+
+fix for ETCH-52: merge changes from 1.0.2 branch to trunk - 739277 update
+eclipse build
+
+this adds eclipse external tools for linux. and renames the external tools for
+windows to have Win in their name.
+----------------------------------------------------------------------------
+r740787 | sccomer | 2009-02-04 10:51:40 CST
+
+fix for ETCH-55: merge changes from 1.0.2 branch to trunk - 739287 fix for
+selector under linux
+
+under linux the java selector's select method occasionally throws an IOException
+with message File exists. it means nothing and can be ignored. this is a work
+around for a java bug.
+----------------------------------------------------------------------------
+r740780 | sccomer | 2009-02-04 10:30:22 CST
+
+fix for ETCH-53: merge changes from 1.0.2 branch to trunk - 739282 updates to
+unit tests
+
+these update to the unit tests make them more resilient to timing issues with
+regard to listening sockets when used on different operating systems.
+----------------------------------------------------------------------------
+r740767 | sccomer | 2009-02-04 09:27:52 CST
+
+fix for ETCH-54: TransportFactory.newTransport returns stack topped by
+DeliveryService which makes it hard to implement meta transports
+----------------------------------------------------------------------------
+r740325 | sccomer | 2009-02-03 09:55:25 CST
+
+fix for ETCH-33: create directory structure for c binding
+
+fix for ETCH-36: create the directory structure for the python binding
+----------------------------------------------------------------------------
+r739689 | sccomer | 2009-01-31 21:20:00 CST
+
+remove optimize using.
+
+added Binding to description.
+
+corrected xml binding unit test.
+----------------------------------------------------------------------------
+r739436 | sccomer | 2009-01-30 16:27:02 CST
+
+refactored csharp binding runtime namespace from Etch to
+Org.Apache.Etch.Bindings.Csharp.
+----------------------------------------------------------------------------
+r739432 | sccomer | 2009-01-30 16:25:03 CST
+
+refactored csharp binding runtime namespace from Etch to
+Org.Apache.Etch.Bindings.Csharp.
+----------------------------------------------------------------------------
+r739428 | sccomer | 2009-01-30 16:09:22 CST
+
+refactored csharp binding runtime namespace from Etch to
+Org.Apache.Etch.Bindings.Csharp.
+----------------------------------------------------------------------------
+r739426 | sccomer | 2009-01-30 16:08:23 CST
+
+refactored csharp binding runtime namespace from Etch to
+Org.Apache.Etch.Bindings.Csharp.
+----------------------------------------------------------------------------
+r739422 | sccomer | 2009-01-30 16:01:26 CST
+
+refactored csharp binding runtime namespace from Etch to
+Org.Apache.Etch.Bindings.Csharp.
+----------------------------------------------------------------------------
+r739327 | sccomer | 2009-01-30 10:44:10 CST
+
+optimize using (this is a resharper thing like eclipse optimize imports).
+----------------------------------------------------------------------------
+r739325 | sccomer | 2009-01-30 10:36:17 CST
+
+optimize using (this is a resharper thing like eclipse optimize imports).
+----------------------------------------------------------------------------
+r739168 | sccomer | 2009-01-29 22:36:32 CST
+
+remove obsolete packages.
+----------------------------------------------------------------------------
+r739165 | sccomer | 2009-01-29 22:28:58 CST
+
+remove obsolete packages.
+----------------------------------------------------------------------------
+r739164 | sccomer | 2009-01-29 22:27:24 CST
+
+remove obsolete packages.
+----------------------------------------------------------------------------
+r739163 | sccomer | 2009-01-29 22:21:28 CST
+
+finished java package name conversion. some conversion of csharp code.
+----------------------------------------------------------------------------
+r739093 | sccomer | 2009-01-29 18:03:49 CST
+
+remove obsolete packages.
+----------------------------------------------------------------------------
+r739092 | sccomer | 2009-01-29 18:03:06 CST
+
+remove obsolete packages.
+----------------------------------------------------------------------------
+r739091 | sccomer | 2009-01-29 18:02:03 CST
+
+refactor ant task package names.
+----------------------------------------------------------------------------
+r739074 | sccomer | 2009-01-29 17:10:17 CST
+
+optimize java imports.
+
+remove obsolete packages.
+----------------------------------------------------------------------------
+r739033 | sccomer | 2009-01-29 15:50:44 CST
+
+refactored etch tests, java pieces and some csharp.
+----------------------------------------------------------------------------
+r738969 | sccomer | 2009-01-29 13:11:26 CST
+
+remove obsolete packages.
+----------------------------------------------------------------------------
+r738968 | sccomer | 2009-01-29 13:09:33 CST
+
+remove obsolete packages.
+----------------------------------------------------------------------------
+r738967 | sccomer | 2009-01-29 13:08:32 CST
+
+remove obsolete packages.
+----------------------------------------------------------------------------
+r738966 | sccomer | 2009-01-29 13:07:12 CST
+
+remove obsolete packages.
+----------------------------------------------------------------------------
+r738964 | sccomer | 2009-01-29 13:04:33 CST
+
+remove obsolete packages.
+----------------------------------------------------------------------------
+r738963 | sccomer | 2009-01-29 13:01:27 CST
+
+remove obsolete packages.
+----------------------------------------------------------------------------
+r738923 | sccomer | 2009-01-29 10:45:53 CST
+
+removed obsolete packages.
+----------------------------------------------------------------------------
+r738922 | sccomer | 2009-01-29 10:45:29 CST
+
+removed obsolete packages.
+----------------------------------------------------------------------------
+r738921 | sccomer | 2009-01-29 10:45:18 CST
+
+removed obsolete packages.
+----------------------------------------------------------------------------
+r738919 | sccomer | 2009-01-29 10:43:46 CST
+
+removed obsolete files.
+----------------------------------------------------------------------------
+r738915 | sccomer | 2009-01-29 10:37:49 CST
+
+java name space refactorage 1: util, compiler, all binding compilers, and java
+binding runtime.
+----------------------------------------------------------------------------
+r738897 | dixson | 2009-01-29 09:41:20 CST
+
+Reverted to revision 738231
+----------------------------------------------------------------------------
+r738639 | dixson | 2009-01-28 16:02:55 CST
+
+
+* update version string to include "-incubating" and "apache-etch" where it
+  seemed appropriate
+* collapsed all build-related .txt files into single 'BUILD.txt'
+* collapsed readme/reference .txt files into single 'README.txt'
+* added 'NOTICE.txt'
+* added 'LICENSE.txt' and 'NOTICE.txt' to the manifest of all generated .jar
+  files
+----------------------------------------------------------------------------
+r738231 | sccomer | 2009-01-27 14:33:33 CST
+
+updated changelog and added releasenotes.
+----------------------------------------------------------------------------
+
+-------------
+Release 1.0.2
+-------------
+
+r738160 | sccomer | 2009-01-27 11:30:43 CST
+
+fix for ETCH-31: MySessionListener in TcpTransportFactory does not override
+toString() method to show something useful about the transport stack
+----------------------------------------------------------------------------
+r737984 | dixson | 2009-01-26 21:14:36 CST
+
+update SVN and homepage to apache.org URLs
+----------------------------------------------------------------------------
+r737770 | sccomer | 2009-01-26 11:59:24 CST
+
+fix for ETCH-29: Installing all Maven artifacts along with their sources.
+----------------------------------------------------------------------------
+r737767 | sccomer | 2009-01-26 11:55:12 CST
+
+fix for ETCH-27: mixins cause trouble when two or more mixed in files define a
+type with the same name.
+----------------------------------------------------------------------------
+r737764 | sccomer | 2009-01-26 11:43:19 CST
+
+fix for ETCH-28: Examples do not build due to outdated ant files.
+----------------------------------------------------------------------------
+r736737 | sccomer | 2009-01-22 12:32:13 CST
+
+fix for ETCH-24: The message direction is always "server" for the result_method
+messages in the java-binding valuefactory (also csharp)
+----------------------------------------------------------------------------
+r736725 | sccomer | 2009-01-22 11:43:19 CST
+
+comment out conflicting assignment of JAVA_HOME
+----------------------------------------------------------------------------
+r736724 | sccomer | 2009-01-22 11:42:41 CST
+
+bump the version number to 1.0.2.
+----------------------------------------------------------------------------
+r736169 | sccomer | 2009-01-20 17:25:34 CST
+
+fix for ETCH-25: DefaultDeliveryService ends call with mb.CloseDelivery() and it
+should end it with mb.CloseRead()
+----------------------------------------------------------------------------
+r733843 | rebarraz | 2009-01-12 11:11:12 CST
+
+fix for ETCH-13: added examples to distribution
+----------------------------------------------------------------------------
+r724340 | sccomer | 2008-12-08 07:32:04 CST
+
+factor perf tests into individual static functions called from main.
+
+pull configuration options to the top.
+----------------------------------------------------------------------------
+r723340 | sccomer | 2008-12-04 08:49:24 CST
+
+csharp fix for ETCH-19: Break out common tcp transport options so that they may
+be shared among various transports.
+----------------------------------------------------------------------------
+r723112 | sccomer | 2008-12-03 16:49:22 CST
+
+do the right math related to relative timing tests.
+----------------------------------------------------------------------------
+r723034 | sccomer | 2008-12-03 13:42:19 CST
+
+csharp fix for ETCH-11: AlarmManager deadlocks during shutdown(). break lock on
+AbstractStartable start() and stop() methods. Add back necessary synchronization
+for Monitor.PulseAll() in Stop0(). Port java version of unit test.
+----------------------------------------------------------------------------
+r723032 | sccomer | 2008-12-03 13:39:56 CST
+
+drop blank string for thrown exception in unit test for AlarmManager.
+----------------------------------------------------------------------------
+r722646 | sccomer | 2008-12-02 16:38:21 CST
+
+change the exception thrown by AbstractStartable for already started and is not
+started to Exception from ThreadInterruptedException.
+
+change NullReferenceException thrown by AlarmManager when listener is null to
+ArgumentNullException.
+
+shell of unit test for AlarmManager.
+----------------------------------------------------------------------------
+r722629 | sccomer | 2008-12-02 16:04:52 CST
+
+expanded unit test for AlarmManager.
+
+mostly cosmetic edits for AlarmManager, except tightened up code which notifies
+worker thread when an alarm is removed (if no alarm is removed, then notify is
+not needed).
+----------------------------------------------------------------------------
+r722262 | sccomer | 2008-12-01 16:15:09 CST
+
+java fix for ETCH-11: AlarmManager deadlocks during shutdown().
+
+AlarmManager.shutdown() just calls AbstractStartable.stop() on the static
+instance.
+the bug was actually in AbstractStartable.stop().
+created unit test for AlarmManager which covers this case.
+----------------------------------------------------------------------------
+r722250 | sccomer | 2008-12-01 15:50:56 CST
+
+csharp fix for ETCH-17: SessionListener needs to be more independent.
+----------------------------------------------------------------------------
+r722248 | sccomer | 2008-12-01 15:48:53 CST
+
+improved the comment.
+----------------------------------------------------------------------------
+r722242 | sccomer | 2008-12-01 15:31:41 CST
+
+fix ETCH-6: if free pool exceeds maximum number of threads the exception thrown
+will kill the connection.
+
+also rearrange code in StubBase sessionMessage to enable optimization of NONE
+case.
+----------------------------------------------------------------------------
+r722240 | sccomer | 2008-12-01 15:29:21 CST
+
+fix issue with clock tick quanta in free pool tests.
+----------------------------------------------------------------------------
+r722208 | sccomer | 2008-12-01 14:00:37 CST
+
+implemented unit tests for FreePool in both csharp and java bindings.
+----------------------------------------------------------------------------
+r722205 | sccomer | 2008-12-01 13:58:44 CST
+
+fix for ETCH-23: FreePool has synchronization issues with quick back to back
+calls to Run.
+----------------------------------------------------------------------------
+r722116 | sccomer | 2008-12-01 10:33:04 CST
+
+csharp fix for ETCH-18: KeepAlive throws exception while trying to shutdown
+connection.
+
+fixed both csharp and java versions to use Todo during wakeup to send request
+so as to not block AlarmManager if there is a problem with the connection.
+----------------------------------------------------------------------------
+r722098 | sccomer | 2008-12-01 09:35:14 CST
+
+fix the fix for ETCH-8: canceling mailbox notification registration throws
+exception if not registered.
+
+unit tests for fix for ETCH-8.
+
+----------------------------------------------------------------------------
+r722085 | sccomer | 2008-12-01 08:42:58 CST
+
+java unit test for fix for ETCH-8.
+----------------------------------------------------------------------------
+r720572 | sccomer | 2008-11-25 13:43:44 CST
+
+fix for ETCH-8: canceling mailbox notification registration throws exception if
+not registered.
+----------------------------------------------------------------------------
+r720115 | sccomer | 2008-11-23 22:56:45 CST
+
+changes for selector code to be compatible with jdk 1.5.0_16.
+
+regularize the start/stop handling between Tcp2Listener and Tcp2Connection.
+----------------------------------------------------------------------------
+r719644 | sccomer | 2008-11-21 11:17:48 CST
+
+fixed the test for whether a Tcp2Connection is started.
+
+finalized some instance variables, and made handler private.
+
+synchronized setHandler.
+----------------------------------------------------------------------------
+r719414 | sccomer | 2008-11-20 16:50:55 CST
+
+checkpoint on selectors and transport which uses them.
+----------------------------------------------------------------------------
+r719413 | sccomer | 2008-11-20 16:43:43 CST
+
+correct the name of this test of TcpListener.
+----------------------------------------------------------------------------
+r719286 | sccomer | 2008-11-20 11:02:42 CST
+
+fix for etch-17: SessionListener needs to be more independent.
+fix for etch-19: Break out common tcp transport options so that they may be
+shared among various transports.
+----------------------------------------------------------------------------
+r719279 | sccomer | 2008-11-20 10:47:12 CST
+
+fix for etch-18: KeepAlive throws exception while trying to shutdown connection.
+----------------------------------------------------------------------------
+r713417 | gsandhir | 2008-11-12 10:13:38 CST
+
+Test to see if commit goes through
+----------------------------------------------------------------------------
+r713257 | niclas | 2008-11-11 21:55:20 CST
+
+Checking my own access.
+----------------------------------------------------------------------------
+r712814 | sccomer | 2008-09-30 10:13:12 CDT
+
+fix bug whereby a null enum value would not deserialize correctly. this also
+caused problems when additional elements were added to a service enum and then
+a mix of old and new implementations of the service used together.
+----------------------------------------------------------------------------
+r712813 | dixson3 | 2008-09-10 10:00:41 CDT
+
+skip csharp build on non-windows
+----------------------------------------------------------------------------
+
+-------------
+Release 1.0.1
+-------------
+
+r80 | sccomer | 2008-09-08 15:33:33 CDT
+
+added antlib resource for etch ant plugin, changed chat example to use it.
+----------------------------------------------------------------------------
+r79 | sccomer | 2008-09-08 13:40:12 CDT
+
+add csharp build to dist chat example.
+----------------------------------------------------------------------------
+r78 | sccomer | 2008-09-08 13:00:36 CDT
+
+custom README.txt for chat dist and make the directions all very similar.
+----------------------------------------------------------------------------
+r77 | sccomer | 2008-09-08 12:34:02 CDT
+
+added chat source to the distribution.
+----------------------------------------------------------------------------
+r76 | dixson3 | 2008-09-08 10:30:32 CDT
+
+Filter 'etch-maven-install.bat' to include the correct version number for etch
+Update csharp-unit-test targets to only run when 'BUILD.csharp' is set
+
+----------------------------------------------------------------------------
+r75 | sccomer | 2008-09-07 10:19:23 CDT
+
+updated ChangeLog.txt to the current state of the release.
+----------------------------------------------------------------------------
+
+r74 | sccomer | 2008-09-07 09:56:18 CDT
+r73 | sccomer | 2008-09-05 16:03:49 CDT
+r72 | sccomer | 2008-09-05 15:32:36 CDT
+r71 | sccomer | 2008-09-05 15:31:46 CDT
+r70 | dixson3 | 2008-09-05 08:31:53 CDT
+r69 | sccomer | 2008-09-04 18:03:04 CDT
+r68 | sccomer | 2008-09-04 18:02:24 CDT
+r67 | sccomer | 2008-09-04 09:16:38 CDT
+r66 | sccomer | 2008-09-04 09:14:53 CDT
+r65 | sccomer | 2008-09-02 16:25:03 CDT
+r64 | dixson3 | 2008-09-02 15:44:35 CDT
+r63 | sccomer | 2008-09-02 14:39:23 CDT
+r62 | sccomer | 2008-09-02 14:07:09 CDT
+r61 | sccomer | 2008-09-02 13:42:47 CDT
+r60 | dixson3 | 2008-09-02 11:16:17 CDT
+r59 | sccomer | 2008-09-02 10:41:54 CDT
+
+(various improvements to build scripts.)
+----------------------------------------------------------------------------
+r58 | sccomer | 2008-09-02 10:27:40 CDT
+
+make TestEtchMain.test7 dump msgs upon failure.
+----------------------------------------------------------------------------
+r57 | sccomer | 2008-09-02 07:49:21 CDT
+r56 | sccomer | 2008-09-02 07:35:20 CDT
+r55 | dixson3 | 2008-08-29 21:52:03 CDT
+r54 | dixson3 | 2008-08-29 15:48:01 CDT
+r53 | sccomer | 2008-08-29 10:37:05 CDT
+r52 | sccomer | 2008-08-28 16:05:49 CDT
+r51 | sccomer | 2008-08-28 15:40:26 CDT
+r50 | sccomer | 2008-08-28 14:23:50 CDT
+r49 | sccomer | 2008-08-28 11:04:32 CDT
+
+(various improvements to build scripts.)
+----------------------------------------------------------------------------
+r48 | sccomer | 2008-08-28 10:20:18 CDT
+
+merging changes to various build.xml from release 1.0.0 rev 5-6: mono support
+is not fully baked, use -DUSE.mono to test
+----------------------------------------------------------------------------
+r47 | sccomer | 2008-08-28 09:00:13 CDT
+
+fixed problem with java generated remote rejecting exceptions which are
+subclasses of allowed exceptions.
+----------------------------------------------------------------------------
+r46 | sccomer | 2008-08-27 19:31:44 CDT
+
+fix several bugs and add missing functionality to url so that java and csharp
+versions work the same.
+----------------------------------------------------------------------------
+r45 | sccomer | 2008-08-27 12:44:50 CDT
+
+if last chance exception handler in EtchMain catches an exception, it should
+print it.
+
+correct spelling of csharp Validator.Level enum element MISSING_OK.
+
+implement name for types and fields in csharp BinaryTaggedDataOutput.
+
+add named types and fields testing for csharp binary tagged data.
+----------------------------------------------------------------------------
+r44 | sccomer | 2008-08-26 13:29:24 CDT
+
+fix csharp BinaryTaggedDataInput to support names for types and fields.
+----------------------------------------------------------------------------
+r43 | sccomer | 2008-08-26 10:24:49 CDT
+
+merge compiler driver changes (and a few misc updates to unit tests) from
+branch sccomer-compiler-1 (revs 20-42) to trunk.
+----------------------------------------------------------------------------
+r28 | sccomer | 2008-08-22 11:39:29 CDT
+
+support for java BinaryTaggedDataInput and BinaryTaggedDataOutput using names
+instead of hashes of names for types and fields.
+----------------------------------------------------------------------------
+r27 | sccomer | 2008-08-22 11:38:24 CDT
+
+change java testUrl to better name (TestUrl1).
+----------------------------------------------------------------------------
+r26 | sccomer | 2008-08-22 11:37:41 CDT
+
+changed java codes from using Integer constructor to Integer.valueOf.
+----------------------------------------------------------------------------
+r25 | sccomer | 2008-08-22 11:36:51 CDT
+
+added command line control of starting listener also.
+----------------------------------------------------------------------------
+r24 | sccomer | 2008-08-22 11:35:45 CDT
+
+fix up java URL support of non-string terms.
+
+fully support Boolean in java URL.
+
+properly implement in java URL handling of remove( name, value ) when value
+is a singleton.
+----------------------------------------------------------------------------
+r9 | sccomer | 2008-08-01 15:37:49 CDT
+
+corrected csharp project dependences.
+
+corrected port numbers in distmap test.
+----------------------------------------------------------------------------
+r8 | sccomer | 2008-08-01 14:17:27 CDT
+
+integrated remaining examples into csharp build.
+
+bumped version numbers of expected build to 1.0.1.
+----------------------------------------------------------------------------
+r7 | sccomer | 2008-07-31 15:58:29 CDT
+
+added csharp build of most of the examples.
+
+substitute DOTNET_HOME environment variable for gnarley dot net path in various
+build.xml. this allows disabling the csharp build for those that don't want it.
+
+example ant build setup (antsetup.bat), shows which environment variable and
+path manipulations you need for a build. also shows which ones are optional.
+
+corrected port numbers of distmap example.
+----------------------------------------------------------------------------
+Gaurav was Here
+
+-------------
+Release 1.0.0
+-------------

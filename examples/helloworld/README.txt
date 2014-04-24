@@ -1,0 +1,7 @@
+Helloworld is the classic example and shows basic usage of etch and the interoperability of the bindings.
+
+Call
+ant Debug
+to generate sources, build and run tests.
+
+Further information on how to run the generated executables of different bindings can be found in the dist-README.txt file.

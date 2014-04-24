@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * Licensed to the Apache Software Foundation (ASF) under one   *
+ * or more contributor license agreements.  See the NOTICE file *
+ * distributed with this work for additional information        *
+ * regarding copyright ownership.  The ASF licenses this file   *
+ * to you under the Apache License, Version 2.0 (the            *
+ * "License"); you may not use this file except in compliance   *
+ * with the License.  You may obtain a copy of the License at   *
+ *                                                              *
+ *   http://www.apache.org/licenses/LICENSE-2.0                 *
+ *                                                              *
+ * Unless required by applicable law or agreed to in writing,   *
+ * software distributed under the License is distributed on an  *
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY       *
+ * KIND, either express or implied.  See the License for the    *
+ * specific language governing permissions and limitations      *
+ * under the License.                                           *
+-->
+<project name="etch-cpp-runtime" basedir="." default="help">
+    <description>Etch-to-CPP runtime binding implementation</description>
+    <property name="Etch.basedir" location="${basedir}/../.." />
+
+    <loadproperties srcFile="build.properties"/>
+
+    <!-- import custom rules which can be used by depending projects to override ant targets -->
+    <import file="custom_rules.xml" optional="true" />
+
+    <!-- import etch generics -->
+    <import file="${Etch.basedir}/build-support/etch.includes.xml" />
+
+    <!-- Static properties of the sub-project -->
+    <property name="proj"                 location="${Etch.basedir}/binding-cpp/runtime" />
+    <property name="target"               location="${proj}/target" />
+    <property name="capu3rd"              location="${target}/3rd/capu" />
+    <property name="testResultsDirectory" location="${target}/test-results" />
+
+    <property name="binaryDir"            location="${Etch.dist}/binding-cpp/bin"/>
+    <property name="libaryDir"            location="${Etch.dist}/binding-cpp/lib"/>
+    <property name="headerDir"            location="${Etch.dist}/binding-cpp/include"/>
+
+    <!-- INIT TARGET -->
+    <!-- Modify this target to define project specific properties that can only be set at runtime -->
+    <target name="do-init" >
+        <property name="target_platform"                location="${target}/${platform}"/>
+        <mkdir dir="${target_platform}" />
+        <mkdir dir="${testResultsDirectory}" />
+    </target>
+
+    <!-- CLEAN TARGET -->
+    <target name="do-clean">
+        <delete dir="${target}" />
+    </target>
+
+    <!-- BUILD TARGET -->
+
+    <!-- overriding build target from etch.include.xml -->
+    <target name="build" depends="">
+        <!-- Build platform targets -->
+        <if>
+            <not><isset property="${target.platforms}"/></not>
+            <then>
+                <echo level="warn">No target.platforms set. Trying to build for detected host platform...</echo>
+                    <if>
+                        <os family="windows" />
+                        <then>
+                            <property name="target.platforms" value="Windows_X86_32"/>
+                        </then>
+                    </if>
+                    <if>
+                        <os family="unix" />
+                        <then>
+                            <property name="target.platforms" value="Linux_X86_32"/>
+                        </then>
+                    </if>
+            </then>
+        </if>
+        
+        <if>
+            <equals arg1="${target.platforms}" arg2=""/>
+            <then>
+                <echo>${target.platforms}</echo>
+                <fail message="Not able to detect platform. target.platforms is not set. Aborting."/>
+            </then>
+        </if>
+        <for list="${target.platforms}" param="platform" delimiter="," trim="true">
+            <sequential>
+                <var name="platform" value="@{platform}"/>
+                <var name="cmake.build.etchtests" unset="true"/>
+                <var name="etchtests.writeTestResultsToFile" unset="true"/>
+                <if>
+                    <isset property="target.platforms.${platform}.buildTests" />
+                        <then>
+                            <propertycopy name="cmake.build.etchtests" from="target.platforms.${platform}.buildTests" />
+                        </then>
+                        <else>
+                            <property name="cmake.build.etchtests" value="YES" />
+                        </else>
+                </if>
+                <if>
+                    <isset property="target.platforms.${platform}.writeTestResultsToFile" />
+                        <then>
+                            <propertycopy name="etchtests.writeTestResultsToFile" from="target.platforms.${platform}.writeTestResultsToFile" />
+                        </then>
+                        <else>
+                            <property name="etchtests.writeTestResultsToFile" value="YES" />
+                        </else>
+                </if>
+                <echo>Init platform: ${platform}</echo>
+                <antcall target="init"/>
+                <echo>Building platform: ${platform}</echo>
+                <antcall target="do-build"/>
+                <echo>Testing platform: ${platform}</echo>
+                <if>
+                    <equals arg1="${etchtests.writeTestResultsToFile}" arg2="YES"/>
+                    <then>
+                        <antcall target="do-test"/>
+                    </then>
+                    <else>
+                        <antcall target="do-test-noTestResults"/>
+                    </else>
+                </if>
+
+            </sequential>
+        </for>
+
+    </target>
+
+    <target name="do-build-info" unless="USE.cmake">
+        <echo message="**********************************" />
+        <echo message="binding-cpp build will not be done." />
+        <echo message="**********************************" />
+    </target>
+
+    <target name="do-build-generate-sources" if="USE.cmake">
+        <mkdir dir="${Etch.dist}/binding-cpp" />
+        <!-- package up etch-java-runtime src -->
+        <zip destfile="${Etch.dist}/binding-cpp/${etch-cpp-runtime-src.zip}">
+            <fileset dir="${proj}">
+                <exclude name="target/" />
+                <exclude name="doc/" />
+                <exclude name="**/.svn" />
+            </fileset>
+        </zip>
+    </target>
+
+    <target name="do-build-main" if="USE.cmake">
+        <property name="defaultCMakeToolchainDir" value="${basedir}/toolchains"/>
+        <if>
+            <isset property="target.platforms.${platform}.toolchainfile"/>
+            <then>
+                <propertycopy name="cmake.toolchainfile" from="target.platforms.${platform}.toolchainfile" />
+            </then>
+            <else>
+                <property name="cmake.toolchainfile" value="${defaultCMakeToolchainDir}/${platform}.toolchain"/>
+            </else>
+        </if>
+
+        <if>
+            <isset property="CAPU_INCLUDE_DIR"/>
+            <then>
+                <property name="use.capu.include.dir" value="${CAPU_INCLUDE_DIR}"/>
+            </then>
+            <else>
+                <property name="use.capu.include.dir" value=""/>
+            </else>
+        </if>
+
+        <if>
+            <isset property="CAPU_LIBRARY_DIR"/>
+            <then>
+                <property name="use.capu.library.dir" value="${CAPU_LIBRARY_DIR}"/>
+            </then>
+            <else>
+                <property name="use.capu.library.dir" value=""/>
+            </else>
+        </if>
+
+        <if>
+            <isset property="LOCAL_CAPU_SOURCE_DIR"/>
+            <then>
+                <property name="use.capu.local.source.dir" value="${LOCAL_CAPU_SOURCE_DIR}"/>
+            </then>
+            <else>
+                <property name="use.capu.local.source.dir" value=""/>
+            </else>
+        </if>
+
+        <if>
+            <isset property="CUSTOM_BUILD_OPTIONS"/>
+            <then>
+                <property name="use.custom.build.options" value="${CUSTOM_BUILD_OPTIONS}"/>
+            </then>
+            <else>
+                <property name="use.custom.build.options" value=""/>
+            </else>
+        </if>
+
+        <if>
+            <isset property="ios.sdkVersion" />
+                <then>
+                    <propertycopy name="cmake.ios.sdkVersion" from="ios.sdkVersion" />
+                </then>
+                <else>
+                    <property name="cmake.ios.sdkVersion" value="7.1" />
+                </else>
+        </if>
+
+        <if>
+            <isset property="target.platforms.${platform}.generator"/>
+            <then>
+                <!-- use specified generator -->
+                <propertycopy name="cmake.generator" from="target.platforms.${platform}.generator" />
+                <echo>Configuring CMake build</echo>
+                <echo>Using generator: ${cmake.generator}</echo>
+                <echo>Using toolchain file: ${cmake.toolchainfile}</echo>
+
+                <mkdir dir="${target}/${platform}/${Etch.build.target}"/>
+
+                <!-- CMake configuration -->
+                <exec dir="${target}/${platform}/${Etch.build.target}" executable="cmake" failonerror="true">
+                    <arg value="-G${cmake.generator}"/>
+                    <arg value="-DETCH_EXTERNAL_DEPENDS:PATH=${env.ETCH_EXTERNAL_DEPENDS}" />
+                    <arg value="-DCMAKE_TOOLCHAIN_FILE:FILEPATH=${cmake.toolchainfile}" />
+                    <arg value="-DETCH_INSTALL_DIR:PATH=${Etch.dist}/binding-cpp"/>
+                    <arg value="-DETCH_TARGET_PLATFORM:STRING=${platform}"/>
+                    <arg value="-DCMAKE_BUILD_TYPE:STRING=${Etch.build.target}"/>
+                    <arg value="-DCAPU_INCLUDE_DIR:PATH=${use.capu.include.dir}"/>
+                    <arg value="-DCAPU_LIBRARY_DIR:PATH=${use.capu.library.dir}"/>
+                    <arg value="-DCAPU_BUILD_DIR:PATH=${capu3rd}" />
+                    <arg value="-DSDK_VERSION:STRING=${cmake.ios.sdkVersion}" />
+                    <arg value="-DLOCAL_CAPU_SOURCE_DIR:PATH=${use.capu.local.source.dir}"/>
+                    <arg value="-DCONFIG_BUILD_TESTS:BOOL=${cmake.build.etchtests}" />
+                    <arg value="${basedir}"/>
+                </exec>
+
+                <!-- run the build -->
+                <exec dir="${target}/${platform}/${Etch.build.target}" executable="cmake" failonerror="false">
+                    <arg line="--build . --target rebuild_cache --config ${Etch.build.target}"/>
+                </exec>
+
+                <!-- run the build -->
+                <exec dir="${target}/${platform}/${Etch.build.target}" executable="cmake" failonerror="true">
+                    <arg line="--build . --target install --config ${Etch.build.target}"/>
+                </exec>
+
+            </then>
+            <else>
+                <!-- try default generator -->
+                <echo>Configuring CMake build</echo>
+                <echo>Using default generator</echo>
+                <echo>Using toolchain file: ${cmake.toolchainfile}</echo>
+
+                <mkdir dir="${target}/${platform}/${Etch.build.target}"/>
+                
+                <!-- CMake configuration -->
+                <exec dir="${target}/${platform}/${Etch.build.target}" executable="cmake" failonerror="true">
+                    <arg value="-DETCH_EXTERNAL_DEPENDS:PATH=${env.ETCH_EXTERNAL_DEPENDS}" />
+                    <arg value="-DCMAKE_TOOLCHAIN_FILE:FILEPATH=${cmake.toolchainfile}" />
+                    <arg value="-DETCH_INSTALL_DIR:PATH=${Etch.dist}/binding-cpp"/>
+                    <arg value="-DETCH_TARGET_PLATFORM:STRING=${platform}"/>
+                    <arg value="-DCMAKE_BUILD_TYPE:STRING=${Etch.build.target}"/>
+                    <arg value="-DCAPU_INCLUDE_DIR:PATH=${use.capu.include.dir}"/>
+                    <arg value="-DCAPU_LIBRARY_DIR:PATH=${use.capu.library.dir}"/>
+                    <arg value="-DLOCAL_CAPU_SOURCE_DIR:PATH=${use.capu.local.source.dir}"/>
+                    <arg value="-DCAPU_BUILD_DIR:PATH=${capu3rd}" />
+                    <arg value="-DSDK_VERSION:STRING=${cmake.ios.sdkVersion}" />
+                    <arg value="-DCONFIG_BUILD_TESTS:BOOL=${cmake.build.etchtests}" />
+                    <arg value="${basedir}"/>
+                </exec>
+
+                <!-- run the build -->
+                <exec dir="${target}/${platform}/${Etch.build.target}" executable="cmake" failonerror="true">
+                    <arg line="--build . --target install --config ${Etch.build.target} -- ${use.custom.build.options}"/>
+                </exec>
+                
+            </else>
+        </if>
+    </target>
+
+    <target name="do-build" depends="do-build-info,do-build-generate-sources,do-build-main" if="USE.cmake">
+
+    </target>
+
+    <!-- TEST TARGET -->
+    <target name="test" depends="postbuild">
+    </target>
+
+    <target name="postbuild" depends="build,do-postbuild">
+    </target>
+  
+    <target name="do-test" unless="skip.tests">
+        <if>
+            <not><equals arg1="${cmake.build.etchtests}" arg2="YES"/></not>
+            <then>
+                <echo>Test execution has been disabled.</echo>
+            </then>
+            <else>
+                <!-- Run Etch Unit Tests -->
+                <!-- Run Etch Unit Tests on Windows-->
+                <exec executable="${binaryDir}/${platform}/${Etch.build.target}/etch-cpp-test.exe" osfamily="windows"  failonerror="true">
+                    <arg value="--gtest_output=xml:${testResultsDirectory}/"/>
+                </exec>
+                <!-- Run Etch Unit Tests on Unix -->
+                <exec executable="${binaryDir}/${platform}/${Etch.build.target}/etch-cpp-test" osfamily="unix"  failonerror="true">
+                    <arg value="--gtest_output=xml:${testResultsDirectory}/"/>
+                </exec>
+            </else>
+        </if>
+    </target>
+
+    <target name="do-test-noTestResults" unless="skip.tests">
+         <if>
+            <not><equals arg1="${cmake.build.etchtests}" arg2="YES"/></not>
+            <then>
+                <echo>Test execution has been disabled.</echo>
+            </then>
+            <else>
+                <!-- Run Etch Unit Tests -->
+                <!-- Run Etch Unit Tests on Windows-->
+                <exec executable="${binaryDir}/${platform}/${Etch.build.target}/etch-cpp-test.exe" osfamily="windows"  failonerror="true" />
+                <!-- Run Etch Unit Tests on Unix -->
+                <exec executable="${binaryDir}/${platform}/${Etch.build.target}/etch-cpp-test" osfamily="unix"  failonerror="true" />
+            </else>
+        </if>
+    </target>
+
+    <target name="do-publish" if="build.tests.fail">
+        <!-- Set flag file if any tests failed -->
+        <touch file="${Etch.runtime.tests.fail}"/>
+    </target>
+
+</project>
+
