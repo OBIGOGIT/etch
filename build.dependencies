@@ -1,0 +1,53 @@
+# Licensed to the Apache Software Foundation (ASF) under one   *
+# or more contributor license agreements.  See the NOTICE file *
+# distributed with this work for additional information        *
+# regarding copyright ownership.  The ASF licenses this file   *
+# to you under the Apache License, Version 2.0 (the            *
+# "License"); you may not use this file except in compliance   *
+# with the License.  You may obtain a copy of the License at   *
+#                                                              *
+#   http://www.apache.org/licenses/LICENSE-2.0                 *
+#                                                              *
+# Unless required by applicable law or agreed to in writing,   *
+# software distributed under the License is distributed on an  *
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY       *
+# KIND, either express or implied.  See the License for the    *
+# specific language governing permissions and limitations      *
+# under the License.                                           *
+
+##
+## Core Dependencies .. these must be set
+##
+
+javacc.home=${env.ETCH_EXTERNAL_DEPENDS}/javacc/5.0
+junit.lib=${env.ETCH_EXTERNAL_DEPENDS}/junit/4.3.1
+velocity.lib=${env.ETCH_EXTERNAL_DEPENDS}/velocity/1.7
+
+##
+## Optional Dependencies
+##
+
+## NSIS
+nsis.home=${env.ETCH_EXTERNAL_DEPENDS}/nsis/2.46
+
+## Clover
+clover.home=${env.ETCH_EXTERNAL_DEPENDS}/clover-ant/2.3.2
+
+## Csharp ANT support
+ant-dotnet.lib=${env.ETCH_EXTERNAL_DEPENDS}/apache-ant-dotnet/1.1
+
+## CMake ANT support
+ant-cmake.lib=${env.ETCH_EXTERNAL_DEPENDS}/apache-ant-cmake/1.0
+
+## Ant-contrib support
+ant-contrib.lib=${env.ETCH_EXTERNAL_DEPENDS}/ant-contrib/1.0b3
+
+##
+## Settings
+##
+
+## skip tests build? (comment this to exclude)
+#skip.tests=true
+
+## skip example build? (comment this to exclude)
+#skip.examples=true

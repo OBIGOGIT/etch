@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY % globalent SYSTEM "../../libs/global.ent">
+%globalent;
+]>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="introduction-chap" status="review">
+  <info><title xml:id="introduction">Introduction</title></info>
+    
+  <section xml:id="about" status="review"><info><title>About Etch</title></info>
+    
+    <para>
+      Etch is a cross-platform, language- and transport-independent 
+      framework for building and consuming network services. The Etch 
+      toolset includes a  network service description language, a compiler, 
+      and binding libraries for a variety of  programming languages. Etch 
+      is also transport-independent, allowing for a variety of  different 
+      transports to be used based on need and circumstance. The goal of 
+      Etch is to make it  simple to define small, focused services that 
+      can be easily accessed,  combined, and deployed in a similar manner. 
+      With Etch, service  development and consumption becomes no more 
+      difficult than library  development and consumption.
+    </para>
+    
+    <para>
+      Etch was started because we wanted to have a way to write a  
+      concise, formal description of the message exchange between a client  
+      and a server, with that message exchange supporting a hefty set of  requirements:
+    </para>
+
+    <para>
+      <itemizedlist>
+	<listitem>support one-way and two-way, real-time  communication</listitem>
+	<listitem>high performance and scalability</listitem>
+	<listitem>support clients and servers written in different  languages</listitem>
+	<listitem>support clients/servers running in a wide range of  contexts (such as thin web client, embedded device, PC application, or  server)</listitem>
+	<listitem>support anyone adding new language bindings and new  transports</listitem>
+	<listitem>be fast and small, while still being flexible enough to  satisfy requirements</listitem>
+	<listitem>finally, it must be easy to use for developers both  implementing and/or consuming the service.</listitem>
+      </itemizedlist>
+    </para>
+  </section>
+  
+ <!--
+   <sect1 id="typo-conventions" status="review">
+     <title>Typographical Conventions</title>
+     <para>Section about Typographical Conventions.</para>
+   </sect1>
+
+   <sect1 id="about-examples" status="review">
+     <title>About Code Examples</title>
+     <para>Section about Code Examples.</para>
+   </sect1>
+ -->
+   <section xml:id="contact" status="review"><info><title>Who we are</title></info>
+     
+
+     <para>
+     Past and present Etch contributors include (in alphabetical order)
+       <itemizedlist>
+	 <listitem> Rene Barrazza </listitem>
+	 <listitem> Seth Call </listitem>
+	 <listitem> Scott Comer </listitem>
+	 <listitem> James DeCocq </listitem>
+	 <listitem> James Dixson </listitem>
+	 <listitem> Michael Fitzner </listitem>
+	 <listitem> Holger Grandy </listitem>
+	 <listitem> J.D. Liau </listitem>
+	 <listitem> Youngjin Park </listitem>
+       	 <listitem> Gaurav Sandhir </listitem>
+       </itemizedlist>
+     </para>
+
+     <para>
+       You can contact the Etch Community at:
+       <itemizedlist>
+	 <listitem> Etch User List: etch-user@incubator.apache.org</listitem>
+	 <listitem> Etch Development List: etch-dev@incubator.apache.org</listitem>
+       </itemizedlist>
+     </para>
+   </section>
+
+   <section xml:id="support" status="review"><info><title>Etch Support</title></info>
+     
+     <para>
+       The main source of static information about Etch (aside of this  manual) is the project 
+       website at <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://incubator.apache.org/etch">  http://incubator.apache.org/etch</link>.  
+     </para>
+
+     <para>
+       Do not hesitate to post issues of any kind to the project mailing lists.
+       <itemizedlist>
+	 <listitem> Etch User List: etch-user@incubator.apache.org</listitem>
+	 <listitem> Etch Development List: etch-dev@incubator.apache.org</listitem>
+       </itemizedlist>
+     </para>
+
+     <para>
+      Archives are available at 
+       <itemizedlist>
+	 <listitem> <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://mail-archives.apache.org/mod_mbox/incubator-etch-user/"> Etch-User List Archive </link> </listitem>
+	 <listitem> <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://mail-archives.apache.org/mod_mbox/incubator-etch-dev/"> Etch-User List Archive </link> </listitem>
+       </itemizedlist>
+     </para>
+
+  </section>
+</chapter>

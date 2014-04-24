@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter [
+<!ENTITY % globalent SYSTEM "../../libs/global.ent">
+%globalent;
+]>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xml:id="hellp-world-example-chap" status="review">
+  <info>
+    <title xml:id="hellp-world-example">Hello World Example</title>
+  </info>
+  
+  <section xml:id="hellp-world-nsdl" status="review"><info><title>Network Service Definition Language</title></info>
+    
+    <para>Write Network Service Definition Language for Hello World example.</para>
+  </section>
+
+  <section xml:id="hellp-world-java" status="review"><info><title>Binding Java</title></info>
+    
+    <para>Write example with java.</para>
+  </section>
+
+  <section xml:id="hellp-world-csharp" status="review"><info><title>Binding C#</title></info>
+    
+    <para>Write example with java.</para>
+  </section>
+
+  <section xml:id="hellp-world-c" status="review"><info><title>Binding C</title></info>
+    
+    <para>Write example with java.</para>
+  </section>
+
+</chapter>

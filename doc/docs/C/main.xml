@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book [
+<!ENTITY % globalent SYSTEM "../../libs/global.ent">
+%globalent;
+]>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xml:lang="en">
+<info><title>Etch Documentation</title>
+  
+    <abstract>
+      <para>
+      This is the reference documentation for Apache Etch.
+      </para>
+  </abstract>
+</info>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="introduction.xml" parse="xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="overview.xml" parse="xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hello-world-example.xml" parse="xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="nsdl.xml" parse="xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="binding-java.xml" parse="xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="binding-csharp.xml" parse="xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="binding-c.xml" parse="xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="bibliography.xml" parse="xml"/>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="docbook-intro.xml" parse="xml"/>
+</book>

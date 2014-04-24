@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  *  Licensed to the Apache Software Foundation (ASF) under one   *
+  *  or more contributor license agreements.  See the NOTICE file *
+  *  distributed with this work for additional information        *
+  *  regarding copyright ownership.  The ASF licenses this file   *
+  *  to you under the Apache License, Version 2.0 (the            *
+  *  "License"); you may not use this file except in compliance   *
+  *  with the License.  You may obtain a copy of the License at   *
+  *                                                               *
+  *    http://www.apache.org/licenses/LICENSE-2.0                 *
+  *                                                               *
+  *  Unless required by applicable law or agreed to in writing,   *
+  *  software distributed under the License is distributed on an  *
+  *  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY       *
+  *  KIND, either express or implied.  See the License for the    *
+  *  specific language governing permissions and limitations      *
+  *  under the License. 
+-->
+<project name="etch-python-runtime" basedir="." default="help">
+    <description>Etch-to-Python runtime binding implementation</description>
+    <property name="Etch.basedir" location="${basedir}/../.." />
+    <import file="${Etch.basedir}/build-support/etch.includes.xml" />
+
+    <!-- Static properties of the sub-project -->
+    <property name="proj"                 location="${Etch.basedir}/binding-python/runtime" />
+    <property name="target"               location="${proj}/target" />
+    <property name="src"                  location="${proj}/src" />
+    <property name="testResultsDirectory" location="${target}/test-results"  />
+
+    <taskdef resource="pyAntTasks.properties" classpath="/Users/dixson/Downloads/pyAntTasks-1.2.jar" />
+
+    <macrodef name="do-python">
+        <attribute name="python" default="/opt/local/bin/python2.6" />
+        <sequential>
+
+        </sequential>
+    </macrodef>
+
+
+    <!-- INIT TARGET -->
+    <!-- Modify this target to define project specific properties that can only be set at runtime -->
+    <target name="do-init">
+        <delete dir="${target}" failonerror="false" quiet="true" />
+
+        <mkdir dir="${target}" />
+        <mkdir dir="${testResultsDirectory}" />
+    </target>
+
+    <!-- CLEAN TARGET -->
+    <target name="do-clean">
+        <delete dir="${target}" />
+    </target>
+
+    <!-- BUILD TARGET -->
+
+    <target name="generate-sources" >
+        <!-- Generate version info -->
+        <mkdir dir="${target}" />
+        <mkdir dir="${target}/" />
+        <mkdir dir="${target}/src" />
+        <mkdir dir="${target}/test" />
+        <copy todir="${target}/src" >
+            <fileset dir="${src}/main/python" >
+                <include name="etch/**" />
+            </fileset>
+        </copy>
+        <copy todir="${target}/src" >
+            <fileset dir="${src}/main/resources" >
+                <include name="*egg*/*" />
+            </fileset>
+            <filterset refid="Etch.buildTokens" />
+        </copy>
+        <copy todir="${target}/src" >
+            <fileset dir="${src}/test/python" >
+                <include name="**" />
+            </fileset>
+        </copy>
+        <copy todir="${target}" file="${src}/main/python/setup.py" >
+            <filterset refid="Etch.buildTokens" />
+        </copy>
+    
+    </target>
+
+    <target name="do-build" depends="generate-sources" >
+        <py-compile python="/opt/local/bin/python2.6" dir="${target}/src" pythonpath="${target}/src" />
+
+        <mkdir dir="${target}/dist" />
+        <copy todir="${target}/dist" >
+            <fileset dir="${target}/src" >
+                <include name="etch/**" />
+            </fileset>
+        </copy>
+    
+    </target>
+
+    <!-- TEST TARGET -->
+
+    <target name="do-test" >
+        <py-test python="/opt/local/bin/python2.6" pythonpath="${target}/dist" dir="${target}/src/tests" >
+            <fileset dir="${target}/src/tests" >
+                <include name="**/msg/Test*.py" />
+            </fileset>
+        </py-test>
+    </target>
+
+    <!-- POSTBUILD TARGET -->
+    <target name="do-postbuild">
+    </target>
+
+    <target name="do-publish" if="build.tests.fail">
+        <!-- Set flag file if any tests failed -->
+        <touch file="${Etch.runtime.tests.fail}"/>
+    </target>
+
+</project>
